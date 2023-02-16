@@ -1,0 +1,100 @@
+{
+
+  "language": {
+    "group": "Widget Settings",
+    "label": "Language",
+    "type": "dropdown",
+    "value": "",
+    "options": {
+      "en": "English",
+      "pt": "Português"
+    }
+  },
+  
+  "reactivateTimer": {
+    "group": "Widget Settings", 
+    "label": "Interval to activate it again (in minutes)", 
+    "type": "number",
+    "value": 20,
+    "min": 1, 
+    "step": 1
+  },  
+    
+  "activationSuccess": {
+    "group": "Widget Settings",
+    "label": "Activation Success %",
+    "type": "number",
+    "value": 50,
+    "min": 0,
+    "max": 100,
+    "step": 1
+  },
+  
+  "blueScreenTime": {
+    "group": "Widget Settings",
+    "label": "How long in BlueScreen? (in seconds)",
+    "type": "number",
+    "value": 7,
+    "min": 1,
+    "max": 60,
+    "step": 1
+  },
+  
+  "connectObs": {
+    "group": "OBS Settings",
+    "type": "dropdown",
+    "label": "Connect to OBS?",
+    "value": false,
+    "options": {
+      "true": "Yes",
+      "false": "No"
+    }
+  },
+    
+  "obsPort": {
+    "group": "OBS Settings",
+    "type": "number", 
+    "label": "OBS Websocket port:",
+    "value": 4455
+  },
+  
+  "obsPassword": {
+    "group": "OBS Settings",
+    "type": "password",
+    "label": "OBS password",
+    "value": ""    
+  },  
+  
+  "microphone": {
+    "group": "OBS Settings",
+    "type": "text",
+    "label": "Microphone name",
+    "value": "Mic/Aux"
+  },
+  
+  "desktopAudio": {
+    "group": "OBS Settings",
+    "type": "text",
+    "label": "Desktop audio name",
+    "value": "Desktop Audio"
+  },  
+  
+  "channelPointName": {
+    "group": "Channel Point Settings", 
+    "type": "text", 
+    "label": "Channel Point name:",
+    "value": ""
+  },
+  
+  "channelPointId": {
+    "group": "Channel Point Settings", 
+    "type": "text", 
+    "label": "Channel Point ID:",
+    "value": ""
+  },
+  
+  "refresh": {
+    "type": "button",
+    "label": "Refresh widget"
+  } 
+}
