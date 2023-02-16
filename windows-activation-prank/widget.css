@@ -1,0 +1,267 @@
+/* <!-- ERROR SCREEN WIDGET --> */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Segoe UI;  
+  color: hsl(1, 0%, 90%);
+}
+
+.screen-container {  
+  visibility: hidden;
+  background-color: #0078d7; 
+}
+
+.error-wrapper {
+  padding: 0;
+  margin: 0;    
+  color: white;  
+  width: 1920px;
+  height: 1080px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 200px;
+}
+
+.sad-face {
+  font-size: 17rem;
+  margin-left: 0;
+}
+
+.error-message {
+  line-height: 1.5;
+  font-size: 3.2rem;
+  margin-left: 20px;
+}
+
+.percentage {
+  font-size: 3.2rem;
+  padding: 1.5% 1.5% 3% 0;
+  margin-left: 20px;
+}
+
+.qrcode {
+  width: 140px;
+  height: 140px;
+  display: inline;
+  margin-left: 10px;
+}
+
+.info-wrapper {
+  display: inline;  
+  position: relative;
+  bottom: 150px;
+  left: 180px;
+}
+
+.more-information {
+  font-size: 1.5rem;
+}
+
+.none{
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.support-person {  
+  padding: 1% 1% 0.5% 0;
+  font-size: 1.2rem;
+}
+
+.stop-code {
+  font-size: 1.2rem;
+}
+
+
+
+/* <!-- PRODUCT KEY WINDOW --> */
+.window-container {
+  position: absolute;
+  top: 300px;
+  left: 500px;
+  height: 400px;
+  width: 1000px;
+  visibility: hidden;
+  background-color: #0069db;
+  border: 0.5px solid black;
+}
+
+.title {
+  background-color: hsl(1, 0%, 100%, 100%);
+  color: hsl(1, 0%, 0%, 100%);
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.title-message {
+  font-size: 1.2em;
+}
+
+.subtitle {
+  font-size: 2.1em;
+  padding: 20px;
+  padding-left: 25px;
+}
+
+.message-1 {
+  font-size: 1.4em;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px
+}
+
+.message-2 {
+  font-size: 1.4em;
+  padding: 5px;
+  padding-left: 25px;  
+}
+
+.product-key {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 5px;
+  margin-left: 25px;  
+  width: 600px;
+  color: hsl(1, 1%, 50%, 50%);
+  background-color: hsl(1, 1%, 100%, 100%);
+}
+
+.buttons {
+  padding: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: right;  
+  align-items: center;
+  gap: 30px;
+  margin-right: 20px;
+}
+
+.button {
+  width: 80px;
+  text-decoration: none;
+  color: #fff; 
+  padding: 10px; 
+  border: 3px solid white;
+  text-align: center;
+}
+
+.avancar {  
+  background-color: hsl(211, 100%, 43%); /* default color */
+  /* background-color: hsl(211, 100%, 60%); /* hover color*/
+  /* background-color: hsl(211, 100%, 20%); /* onClick color */
+  /*background-color: #3c87eb;  // onClick color*/
+}
+
+.cancelar {
+  background-color: #0069db;
+}
+
+.pointer-wrapper {
+  position: fixed;
+  bottom: 575px;
+  right: 880px;  
+}
+
+.pointer-animation-x {
+  animation: 0.5s 1 normal moveCursorX ease-out forwards;   
+}
+
+.pointer-animation-y {
+  animation: 0.5s 1 normal moveCursorY ease forwards;
+}
+
+.loading {
+  visibility: hidden;
+  position: absolute;
+  right: 320px;
+  bottom: 160px;
+  transform: scale(0.5);
+}
+
+.loader{
+  height: 25px;
+  width: 1px;
+  position: absolute;
+  animation: rotate 3.5s linear infinite;
+}
+
+.loader .dot{
+  top: 30px;
+  height: 7px;
+  width: 7px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.loader:nth-child(1){
+  animation-delay: 0.15s;
+}
+.loader:nth-child(2){
+  animation-delay: 0.3s;
+}
+.loader:nth-child(3){
+  animation-delay: 0.45s;
+}
+.loader:nth-child(4){
+  animation-delay: 0.6s;
+}
+.loader:nth-child(5){
+  animation-delay: 0.75s;
+}
+.loader:nth-child(6){
+  animation-delay: 0.9s;
+}
+
+
+@keyframes moveCursorX { 
+  100% { transform: translateX(280px); }
+  /* right: 600px; */
+}
+
+@keyframes moveCursorY {
+  100% { transform: translateY(150px); }
+  /* bottom: 425px; */
+}
+
+@keyframes rotate {
+  30% {
+    transform: rotate(220deg);
+  }
+  40% {
+    transform: rotate(450deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+}
+
+
+/* <!-- ACTIVATE WINDOWS --> */
+.text-container {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+}
+
+.text-container .en {
+  margin-left: 50px;  
+}
+
+.text-container .activate {
+  font-size: 1.7em;
+}
+
+.text-container .settings {
+  font-size: 1.2em;  
+}
