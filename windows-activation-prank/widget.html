@@ -1,0 +1,71 @@
+<script src="https://cdn.jsdelivr.net/npm/obs-websocket-js@5.0.1/dist/obs-ws.min.js" defer></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
+
+<!-- If, for some reason, @latest version of typewriter becomes incompatible, this is the exact version that was used: -->
+<!-- <script src="https://unpkg.com/typewriter-effect@2.19.0/dist/core.js" defer></script> -->
+
+<!-- ERROR SCREEN -->
+<div class='screen-container' id='screen-container'>
+  <div class='error-wrapper' id='error-wrapper'>
+    <div class='sad-face'>:(</div>
+    <!-- English -->
+      <div class='error-message text' id='error-message'></div>
+      <div class='percentage text' id='percentage'></div>
+      <div class='qrcode'><img class='qrcode' src='https://raw.githubusercontent.com/c4ldas/svg/main/qrcode.svg' alt='qr code'></div>
+      <div class='info-wrapper'>
+        <div class='more-information text' id='more-information'></div>
+        <div class='none'></div>
+        <div class='support-person text' id='support-person'></div>
+        <div class='stop-code text' id='stop-code'></div>
+      </div>  
+  </div>
+</div>
+
+<!-- PRODUCT KEY WINDOW --> 
+<div class='window-container' id='window-container'>
+    <div class='title' id='title'>
+      <div class='title-message text' id='title-message'></div>
+    </div>  
+    <div class='body' id='body'>
+      <div class='subtitle text' id='subtitle'></div>
+      <div class='message-1 text' id='message-1'></div>
+      <div class='message-2 text' id='message-2'></div>
+      <span class='product-key text' id="product-key"></span> 
+      <!-- English -->
+      <div class="loading" id='loading'>
+        <div class="loader">
+          <div class="dot"></div>
+        </div>
+        <div class="loader">
+          <div class="dot"></div> 
+        </div>
+        <div class="loader">
+          <div class="dot"></div>
+        </div>
+        <div class="loader">
+          <div class="dot"></div>
+        </div>
+        <div class="loader">
+          <div class="dot"></div>
+        </div>
+        <div class="loader">
+          <div class="dot"></div>
+        </div>
+      </div>      
+      <div class='buttons' id='buttons'>
+        <div class='pointer-wrapper' id='pointer-wrapper'>
+          <img class='pointer' id='pointer' src='https://raw.githubusercontent.com/c4ldas/svg/main/cursor.png' width='50'>
+        </div>
+        <div class='button avancar text' id='avancar'>Eita avanca</div> 
+        <div class='button cancelar text' id='cancelar'>eita cancela</div>  
+      </div>
+    </div> 
+</div>
+
+
+<!-- ACTIVATE WINDOWS TEXT --> 
+<div class='text-container' id='text-container'>
+  <!-- English -->
+    <div class='activate text' id='activate'></div>
+    <div class='settings text' id='settings'></div>
+</div>
