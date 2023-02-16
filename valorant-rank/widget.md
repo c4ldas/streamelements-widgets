@@ -16,4 +16,4 @@ https://strms.net/valorant_rank_by_c4ldas
 https://streamable.com/v05y5b
 
 ### Overlay preview:
-![Overlay Preview](/widget.png)
+![Overlay Preview](/valorant-rank/widget.png)
