@@ -1,0 +1,230 @@
+{
+  "playerName": {
+    "type": "text",
+    "label": "Player name",
+    "group": "LOL"
+  },
+    
+  "region": {
+    "type": "dropdown",
+    "label": "Your Region",
+    "value": "na",
+    "group": "LOL",
+    "options": {
+      "br1": "Brazil (BR)",
+      "eun1": "Europe Nordic & East (EUN)",
+      "euw1": "Europe West (EUW)",
+      "jp1": "Japan (JP)",
+      "kr": "Korea (KR)",
+      "la1": "Latin America North (LA1)",
+      "la2": "Latin America South (LA2)",
+      "na1": "North America (NA)",
+      "oc1": "Oceania (OC)",
+      "ru": "Russia (RU)",
+      "tr1": "Turkey (TR)"
+    }
+  },
+   
+  "showBadgeText1":{
+    "group": "LOL",
+    "type": "hidden",
+    "label": "How long should it be displayed?"
+  },  
+  
+  "showBadge":{
+    "group": "LOL",
+    "type": "number",
+    "label": "In seconds",
+    "value": 20,
+    "steps": 1
+  },
+  
+  "hideBadgeText1":{
+    "group": "LOL",
+    "type": "hidden",
+    "label": "How long should it be hidden?"
+  },  
+  
+  "hideBadge":{
+    "group": "LOL",
+    "type": "number",
+    "label": "In seconds",
+    "value": 60,
+    "steps": 1
+  },
+  
+  "showPointsText1":{
+    "group": "LOL",
+    "type": "hidden",
+    "label": "Show Points?"
+  },
+  
+  "showPoints": {
+    "type": "dropdown",   
+    "label": "Total points in tier",
+    "value": "true",
+    "group": "LOL",
+    "options": {
+      "true": "Yes",
+      "false": "No"
+    }    
+  },
+  
+  "tempDisable1":{
+    "group": "Temporary Disable (only mod)",
+    "type": "hidden",
+    "label": "Command to disable widget"
+  },  
+  
+  "tempDisable":{
+    "group": "Temporary Disable (only mod)",
+    "type": "text",
+    "label": "Until next refresh",
+    "value": "!rankoff"    
+  },  
+
+  "tempEnable1":{
+    "group": "Temporary Disable (only mod)",
+    "type": "hidden",
+    "label": "Command to reenable widget"
+  },  
+  
+  "tempEnable":{
+    "group": "Temporary Disable (only mod)",
+    "type": "text",
+    "label": "Show the widget again",
+    "value": "!rankon"    
+  },    
+  
+  "fontName": {
+    "group": "Font Config",
+    "type": "googleFont",
+    "label": "Font Name",
+    "value": "Righteous"
+  },    
+  
+  "fontSize": {
+    "group": "Font Config",
+    "type": "number",
+    "label": "Font Size",
+    "value": 25,
+    "steps": 0.1
+  },
+  
+  "fontColor": {
+    "group": "Font Config",
+    "type": "colorpicker",
+    "label": "Font Colour",
+    "value": "#ffffff"
+    
+  },
+  
+  "animEnter": {
+    "group": "Animation",
+    "type": "dropdown",
+    "label": "Enter animation",
+    "value": "zoomIn",
+    "options": {
+      "none": "None",
+      "bounceIn": "Bounce In",
+      "bounceInDown": "Bounce In Down",
+      "bounceInLeft": "Bounce In Left",
+      "bounceInRight": "Bounce In Right",
+      "bounceInUp": "Bounce In Up",
+      "fadeIn": "Fade In",
+      "fadeInDown": "Fade In Down",
+      "fadeInDownBig": "Fade In Down Big",
+      "fadeInLeft": "Fade In Left",
+      "fadeInLeftBig": "Fade In Left Big",
+      "fadeInRight": "Fade In Right",
+      "fadeInRightBig": "Fade In Right Big",
+      "fadeInUp": "Fade In Up",
+      "fadeInUpBig": "Fade In Up Big",
+      "flipInX": "Flip In X",
+      "flipInY": "Flip In Y",
+      "lightSpeedIn": "LightSpeed In",
+      "rotateIn": "Rotate In",
+      "rotateInDownLeft": "Rotate In Down Left",
+      "rotateInDownRight": "Rotate In Down Right",
+      "rotateInUpLeft": "Rotate In Up Left",
+      "rotateInUpRight": "Rotate In Up Right",
+      "slideInUp": "Slide In Up",
+      "slideInDown": "Slide In Down",
+      "slideInLeft": "Slide In Left",
+      "slideInRight": "Slide In Right",
+      "zoomIn": "Zoom In",
+      "zoomInDown": "Zoom In Down",
+      "zoomInLeft": "Zoom In Left",
+      "zoomInRight": "Zoom In Right",
+      "zoomInUp": "Zoom In Up",
+      "jackInTheBox": "Jack In The Box",
+      "rollIn": "Roll In"
+    }
+  },
+
+  "animEnterDuration": {
+    "group": "Animation",
+    "type": "number",
+    "label": "Enter animation duration (ms)",
+    "value": 2000
+  },
+
+  "animExit": {
+    "group": "Animation",
+    "type": "dropdown",
+    "label": "Exit animation",
+    "value": "zoomOut",
+    "options": {
+      "none": "None",
+      "bounceOut": "Bounce Out",
+      "bounceOutDown": "Bounce Out Down",
+      "bounceOutLeft": "Bounce Out Left",
+      "bounceOutRight": "Bounce Out Right",
+      "bounceOutUp": "Bounce Out Up",
+      "fadeOut": "Fade Out",
+      "fadeOutDown": "Fade Out Down",
+      "fadeOutDownBig": "Fade Out Down Big",
+      "fadeOutLeft": "Fade Out Left",
+      "fadeOutLeftBig": "Fade Out Left Big",
+      "fadeOutRight": "Fade Out Right",
+      "fadeOutRightBig": "Fade Out Right Big",
+      "fadeOutUp": "Fade Out Up",
+      "fadeOutUpBig": "Fade Out Up Big",
+      "flipOutX": "Flip Out X",
+      "flipOutY": "Flip Out Y",
+      "lightSpeedOut": "LightSpeed Out",
+      "rotateOut": "Rotate Out",
+      "rotateOutDownLeft": "Rotate Out Down Left",
+      "rotateOutDownRight": "Rotate Out Down Right",
+      "rotateOutUpLeft": "Rotate Out Up Left",
+      "rotateOutUpRight": "Rotate Out Up Right",
+      "slideOutUp": "Slide Out Up",
+      "slideOutDown": "Slide Out Down",
+      "slideOutLeft": "Slide Out Left",
+      "slideOutRight": "Slide Out Right",
+      "zoomOut": "Zoom Out",
+      "zoomOutDown": "Zoom Out Down",
+      "zoomOutLeft": "Zoom Out Left",
+      "zoomOutRight": "Zoom Out Right",
+      "zoomOutUp": "Zoom Out Up",
+      "hinge": "Hinge",
+      "rollOut": "Roll Out"
+    }
+  },
+  
+  "animExitDuration": {
+    "group": "Animation",
+    "type": "number",
+    "label": "Exit animation duration (ms)",
+    "value": 2000
+  },
+  
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "c4ldas"
+  },
+  "widgetName": {
+    "type": "hidden",
+    "value": "League of Legends rank"
+  }
+}
