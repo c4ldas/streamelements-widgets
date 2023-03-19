@@ -8,7 +8,7 @@ It is also possible to set to mute the microphone and desktop audio during the B
 
 ## 1-click install: 
 
-LINK TO CREATE
+https://streamelements.com/dashboard/overlays/share/63cd51dcb29bd99ddcea1b50
 
 ## Preview and instructions
 
