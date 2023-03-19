@@ -3,6 +3,7 @@
 This widget emulates an activation Windows screen using Twitch Channel Points. The viewer redeems the Custom Redemption and types a message, which will show in the key field of the activation screen. 
 
 After some seconds, there is a chance (set in the fields) to the activation be successful or trigger a Blue Screen of Death (BSoD). 
+If successful, the message on bottom right asking to activate the Windows will disappear for some time (also set in the fields).
 
 It is also possible to set to mute the microphone and desktop audio during the BSoD enabling Websockets on OBS.
 
