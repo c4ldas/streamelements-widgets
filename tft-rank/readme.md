@@ -8,7 +8,7 @@ Current elo and points are updated every 2 minutes
 
 ## 1-click install: 
 
-LINK TO CREATE
+https://strms.net/tft_rank_by_c4ldas
 
 ## Preview and instructions
 
