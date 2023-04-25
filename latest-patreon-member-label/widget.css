@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family={fontName}');
+
+body {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.username, .updatedAt {
+  font-family: '{{fontName}}', sans-serif;
+  color: {{fontColor}};
+  font-weight: {{fontWeight}};
+  text-shadow: {{textShadowColor}} {{textShadowSize}}px {{textShadowSize}}px {{textShadowSize}}px;
+  font-size: {{fontSize}}px;
+}
