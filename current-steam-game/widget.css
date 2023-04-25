@@ -1,0 +1,29 @@
+#box {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 60%, rgba(0, 212, 255, 0) 100%), url('') center center no-repeat;
+    background-size: 100%;
+    min-height: 150px;
+    min-width: 500px;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+#text {
+    min-width: 55%;
+    max-width: 55%;
+    height: 100%;
+    font-family: 'Varela Round', sans-serif;
+    padding-top: 7%;
+    padding-left: 20px;
+    color: white;
+    padding-bottom: 7%;
+}
+
+#title {
+    font-size: 24px;
+
+}
+
+#infos {
+    color: green;
+    font-size: 20px
+}
