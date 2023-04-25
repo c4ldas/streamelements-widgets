@@ -58,9 +58,8 @@ const dataFetch = await fetch(`https://repl.c4ldas.com.br/api/steam/game/?id=${m
 
 You need a Nodejs server running on your system. `Axios` (version 0.27.2) and `Express` (version 4.18.1) libraries are used, which can be installed using `npm install axios express`. 
 
-On the server, copy the `server.js` contents.
+On the server, copy the `server.js` content.
 
 Set the Steam key as a environment variable called STEAM_KEY
 
 Start the application
-
