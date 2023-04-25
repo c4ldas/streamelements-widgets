@@ -12,6 +12,8 @@ https://streamelements.com/dashboard/overlays/share/64476f5e391f34ac7da6ae64
 
 ### How to use it:
 
+Video Instruction: https://youtu.be/JIWJ0r3gjNQ
+
 1 - Go to https://jebaited.net website and link your Streamelements account
 
 2 - From the website, click on `API Tokens` --> `None selected` (blue button) and select `Patreon`. Click on `Add Token`
