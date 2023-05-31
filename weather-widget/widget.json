@@ -1,0 +1,62 @@
+{
+  "cityDescription": {
+    "type": "hidden",
+    "label": "Your city name",
+    "value": ""
+  },
+  
+  "city": {
+    "type": "text",
+    "label": "'London' or 'Las Vegas, NV, US'",
+    "value": ""
+  },
+  
+  "unit": {
+    "type": "dropdown",
+    "label": "Unit preference",
+    "value": "metric",
+    "options": {
+      "metric": "Metric - Celsius",
+      "imperial": "Imperial - Fahrenheit",
+      "standard": "Standard - Kelvin"
+    } 
+  },
+  
+  "time24hour": {
+    "type": "dropdown",
+    "label": "24 hour format",
+    "value": "true",
+    "options": {
+      "true": "Use 24h format",
+      "false": "Use AM / PM format"
+    }     
+  },
+  
+  "apiKeyDescription": {
+    "type": "Hidden",
+    "label": "Your API Key ",
+    "value": ""
+  },
+  
+  "apiKey": {
+    "type": "password",
+    "label": "ex: 5a7175edee75ef3e987dee5f3e987",
+    "value": ""
+  },
+  
+  "Info":{
+    "type": "text",
+    "label": "API Key can be obtained here:",
+    "value": "https://home.openweathermap.org/api_keys"
+  },
+  
+  "widgetName": {
+    "type": "hidden",
+    "value": "Weather widget"
+  },
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "c4ldas"
+  }
+  
+}
