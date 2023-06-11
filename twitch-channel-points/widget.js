@@ -64,7 +64,7 @@ window.addEventListener('onWidgetLoad', async (obj) => {
     console.log(redemptionData.data);
 
     document.getElementById('redemption').style.background = `no-repeat center/75% url("${image}"), ${background}`;
-    document.getElementById('redemptionMessage').innerText = user_input
+    document.getElementById('redemptionMessage').innerText = user_input ? user_input : ''
     setTimeout( () => {
       document.getElementById('redemption').style.background = ''
       document.getElementById('redemptionMessage').innerText = ''
