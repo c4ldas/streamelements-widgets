@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  font-size: 2rem;
+  font-family: 'Roboto Condensed';
+}
+
+.redemption {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
