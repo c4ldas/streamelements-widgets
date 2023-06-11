@@ -7,7 +7,7 @@ window.addEventListener('onWidgetLoad', async (obj) => {
   const socket = new WebSocket('wss://pubsub-edge.twitch.tv')
   const eventTopic = `community-points-channel-v1.${providerId}`
   
-  document.getElementById('text').innerText = `Twitch Channel Points - ${username}`
+  // document.getElementById('text').innerText = `Twitch Channel Points - ${username}`
   
   // Connection and authentication  
   socket.onopen = (event) => {
