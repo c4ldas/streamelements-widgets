@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family={{fontName}}');
+  
+.container {
+  font-size: {{fontSize}}em;
+  color: {{fontColor}};
+  font-family: {{fontName}};
+  line-height: {{lineHeight}}em;
+  font-weight: {{fontWeight}};
+  font-style: {{fontStyle}};
+}
+
+.top {
+  display: {{displayMode}};
+}
