@@ -19,7 +19,19 @@
     "group": "Configuration"
   },  
   
+  "commandDescription": {
+    "type": "hidden",
+    "label": "Command to add subgifter manually",
+    "value": "",
+    "group": "Configuration"
+  },  
   
+  "command": {
+    "type": "text",
+    "label": "(usage: !addgifter username amount)",
+    "value": "!addgifter",
+    "group": "Configuration"
+  },
   
   
   "displayMode": {
@@ -109,7 +121,7 @@
   "mockData": {
     "type": "text",
     "label": "Mock data to test",
-    "value": "{'userA':9,'userB':8,'userC':14,'userD':3,'userE':6}",
+    "value": "{'TestUserA':9,'TestUserB':8,'TestUserC':14,'TestUserD':3,'TestUserE':6,'TestUserF':4}",
     "group": "Test"
   },
   
