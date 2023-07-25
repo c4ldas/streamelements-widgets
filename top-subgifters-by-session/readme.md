@@ -22,9 +22,16 @@ https://streamelements.com/dashboard/overlays/share/64b179e81c578cf96f011145
 
 4 - Configure the font size, colour, name, weight and style
 
-5 - The values on the screen are just mock data so you can have some idea, those users (userA, userB, userC, etc) and the values won't appear on your OBS
+5 - The values on the screen are just mock data so you can have some idea, those users (TestUserA, TestUserB, TestUserC, etc) and the values won't appear on your OBS
 
 6 - In case you want to check on your OBS, click on Save and then go to Test and click on the button `Test on OBS with mock data`
 
+7 - You can also add manually a subgifter using the command `!addgifter <username> <amount>`
+
+### Video instruction
+
+[![Youtube video instruction](https://i.imgur.com/ZH8SjHl.png)](http://www.youtube.com/watch?v=8lXQ3WC49Pc "Streamelements widget - Top Subgifters by session")
+
 ### Overlay preview:
 ![Overlay Preview](/top-subgifters-by-session/widget.png)
+
