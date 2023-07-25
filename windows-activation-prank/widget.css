@@ -146,14 +146,14 @@ body {
   text-align: center;
 }
 
-.avancar {  
+.next {  
   background-color: hsl(211, 100%, 43%); /* default color */
   /* background-color: hsl(211, 100%, 60%); /* hover color*/
   /* background-color: hsl(211, 100%, 20%); /* onClick color */
   /*background-color: #3c87eb;  // onClick color*/
 }
 
-.cancelar {
+.cancel {
   background-color: #0069db;
 }
 
