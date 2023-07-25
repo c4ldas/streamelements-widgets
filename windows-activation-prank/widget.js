@@ -1,10 +1,9 @@
 /* <!-- ERROR SCREEN WIDGET --> */
 
 window.addEventListener('onWidgetLoad', async (obj) => {
-
-  all = document.getElementsByClassName('text')
+  
   fieldData = obj.detail.fieldData
-  isEditorMode = obj.detail.overlay.isEditorMode
+  isEditorMode = obj.detail.overlay.isEditorMode  
   windowContainer = document.getElementById(`window-container`)
   percentage = document.getElementById(`percentage`)
   moreInformation = document.getElementById(`more-information`)
@@ -21,16 +20,16 @@ window.addEventListener('onWidgetLoad', async (obj) => {
   buttons = document.getElementById(`buttons`)
   pointerWrapper = document.getElementById(`pointer-wrapper`)
   pointer = document.getElementById(`pointer`)
-  avancar = document.getElementById(`avancar`)
-  cancelar = document.getElementById(`cancelar`) 
+  next = document.getElementById(`next`)
+  cancel = document.getElementById(`cancel`) 
   screenContainer = document.getElementById('screen-container')
   textContainer = document.getElementById('text-container')
   activate = document.getElementById('activate')
   settings = document.getElementById('settings')
   
-  textText =  ['errorMessage', 'percentage', 'moreInformation', 'supportPerson', 'stopCode', 'titleMessage', 'activated', 'subtitle', 'message1', 'message2', 'productKey', 'avancar', 'cancelar', 'activate', 'settings']
+  var textArray =  ['errorMessage', 'percentage', 'moreInformation', 'supportPerson', 'stopCode', 'titleMessage', 'activated', 'subtitle', 'message1', 'message2', 'productKey', 'next', 'cancel', 'activate', 'settings']
   
-  mensagem = {
+  var messages = {
     en: {
       errorMessage: "Your PC ran into a problem and needs to restart. We're<br/>just collecting some error info, and then we'll restart for<br/>you.",
       percentage: "20% complete",
@@ -43,8 +42,8 @@ window.addEventListener('onWidgetLoad', async (obj) => {
       message1: "Your product key should be in an email from whoever sold or distributed Windows to you, or on the box the Windows DVD or USB came in.",
       message2: "Product Key",
       productKey: "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX",
-      avancar: "Next",      
-      cancelar: "Cancel",
+      next: "Next",      
+      cancel: "Cancel",
       activate: "Activate Windows",
       settings: "Go to Settings to activate Windows."
     },    
@@ -60,17 +59,17 @@ window.addEventListener('onWidgetLoad', async (obj) => {
       message1: "Sua chave do produto (Product Key) deve estar em um email de quem vendeu ou distribuiu o Windows para você, ou na caixa em que veio o DVD ou USB do Windows.",
       message2: "Chave do produto (Product Key)",
       productKey: "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX",
-      avancar: "Avançar",
-      cancelar: "Cancelar",
+      next: "Avançar",
+      cancel: "Cancelar",
       activate: "Ativar o Windows",
       settings: "Acesse Configurações para ativar o Windows."
     }
   }
     
-  const iterator = textText.values();
+  const iterator = textArray.values();
   for (const value of iterator) {
     if(this[value]) {
-      this[value].innerHTML = mensagem[fieldData.language][value]
+      this[value].innerHTML = messages[fieldData.language][value]
     }    
   }  
   
@@ -80,7 +79,7 @@ window.addEventListener('onWidgetLoad', async (obj) => {
     windowContainer.style.visibility = 'visible'
     windowContainer.style.opacity = 0.3
     textContainer.style.visibility = 'visible'
-    textContainer.style.opacity = 0.3
+    textContainer.style.opacity = 0.7
   }    
   
   // Getting Custom Reward Channel Point ID
@@ -98,6 +97,7 @@ window.addEventListener('onWidgetLoad', async (obj) => {
 })
 
 window.addEventListener('onEventReceived', (obj) => {
+  console.log(fieldData)
   if(obj.detail.event.listener === 'widget-button' && obj.detail.event.field === 'refresh'){
     location.reload()
   }
@@ -125,9 +125,9 @@ window.addEventListener('onEventReceived', (obj) => {
     pointerWrapper.classList.add('pointer-animation-y')
     pointer.classList.add('pointer-animation-x')
     pointer.onanimationend = () => {
-      avancar.style.backgroundColor = 'hsl(211, 100%, 20%)'
+      next.style.backgroundColor = 'hsl(211, 100%, 20%)'
       setTimeout( () => {
-        avancar.style.backgroundColor = 'hsl(211, 100%, 43%)'
+        next.style.backgroundColor = 'hsl(211, 100%, 43%)'
         activatingWindows()
       }, 80)
     }
@@ -136,8 +136,8 @@ window.addEventListener('onEventReceived', (obj) => {
   async function activatingWindows(){
     console.log("activatingWindows...")
     loading.style.visibility = 'visible'
-    avancar.style.visibility = 'hidden'
-    cancelar.style.visibility = 'hidden'
+    next.style.visibility = 'hidden'
+    cancel.style.visibility = 'hidden'
     
     Math.random() < (fieldData.activationSuccess/100) ? success() : failed()
   }
@@ -147,8 +147,8 @@ window.addEventListener('onEventReceived', (obj) => {
     console.log("Success!")
     
     setTimeout( async () => { 
-      titleMessage.innerText = mensagem[fieldData.language].activated
-      message1.innerText = mensagem[fieldData.language].activated
+      titleMessage.innerText = messages[fieldData.language].activated
+      message1.innerText = messages[fieldData.language].activated
       message1.style.fontSize = '3em'
       message1.style.left = '0'
       message1.style.right = '0'
@@ -196,7 +196,7 @@ window.addEventListener('onEventReceived', (obj) => {
       reactivateWidget()
       // windowContainer.style.visibility = 'hidden'
       // screenContainer.style.visibility = 'hidden'       
-      // 
+
     }, fieldData.blueScreenTime * 1000) 
   }
   
