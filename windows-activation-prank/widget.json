@@ -4,7 +4,7 @@
     "group": "Widget Settings",
     "label": "Language",
     "type": "dropdown",
-    "value": "English",
+    "value": "en",
     "options": {
       "en": "English",
       "pt": "Português"
