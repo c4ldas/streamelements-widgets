@@ -46,6 +46,8 @@ The instructions are divided into 3 parts.
  1. On your OBS, go to `Tools` > `WebSocket Server Settings`.
  2. Select the first option `Enable WebSocket server` and `Enable Authentication`. Click on `Show Connect Info` and copy the `Server Password`. Click `OK`
 
+    ![image](https://github.com/c4ldas/streamelements-widgets/assets/75918726/98c9831a-7da9-46d6-bd3e-ac26f3f3abc6)
+
 ## Overlay Configuration
 
 Finally, we are going to setup the overlay.
@@ -61,6 +63,8 @@ Open the overlay and you will see the left part is divided into 4 parts:
    - **OBS Websocket port**: Leave it as 4455, as it is the default one. Only change it in case you have also changed when you activated the OBS Websocket
    - **Microphone name**: Usually it is `Mic/Aux` in your OBS Audio Mixer, unless you have changed it.
    - **Desktop audio name**: Usually it is `Desktop Audio` in your OBS Audio Mixer, unless you have changed it in OBS.
+     
+      ![image](https://github.com/c4ldas/streamelements-widgets/assets/75918726/801c2f68-ddf3-4f7f-b28d-250ff589a783)
 
 3. Channel Point Settings
    - **Channel Point Name**: The name of the Redemption created on Twitch Redemption page. In the example, it is `Windows Activation`
