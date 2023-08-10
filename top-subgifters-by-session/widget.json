@@ -71,6 +71,13 @@
     "group": "Font Settings" 
   },
   
+  "customFontName": {
+    "type": "text",
+    "label": "Use Custom Font (i.e.: MV Boli)",
+    "value": "",
+    "group": "Font Settings"
+  },
+  
   "fontColor": {
     "type": "colorpicker",
     "label": "Font color",
