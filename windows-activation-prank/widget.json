@@ -97,4 +97,14 @@
     "type": "button",
     "label": "Refresh widget"
   } 
+  
+   "widgetAuthor": {
+    "type": "hidden",
+    "value": "c4ldas"
+  },
+  
+  "widgetName": {
+    "type": "hidden",
+    "value": "Windows Activation Prank"
+  }  
 }
