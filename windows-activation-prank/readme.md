@@ -17,8 +17,8 @@ https://streamelements.com/dashboard/overlays/share/63cd51dcb29bd99ddcea1b50
 
 The instructions are divided into 3 parts. 
 1. [Twitch Configuration](readme.md#twitch-configuration) - Here we will create the Channel Points redemption to users will be able to activate it
-2. [OBS Configuration](readme.md#twitch-configuration) - In this part, we will configure the OBS Websocket password, so we can mute and unmute the Mic and Desktop Audio (optional)
-3. [Overlay Configuration](readme.md#twitch-configuration) - Here we add the Redemption info and OBS password.
+2. [OBS Configuration](readme.md#obs-configuration-optional) - In this part, we will configure the OBS Websocket password, so we can mute and unmute the Mic and Desktop Audio (optional)
+3. [Overlay Configuration](readme.md#overlay-configuration) - Here we add the Redemption info and OBS password.
 
 
 ### Twitch Configuration
