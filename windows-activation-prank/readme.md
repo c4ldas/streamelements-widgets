@@ -71,7 +71,7 @@ Open the overlay and you will see the left part is divided into 4 parts:
      
 ## Done!
 
-That's it! Add the overlay to your OBS if not done yet. When a viewer from chat redeems the item `Windows Activation`, the popup will appear like the video below. 
+That's it! Add the overlay to your OBS if not done yet. When a viewer from chat redeems the item `Windows Activation`, the popup will appear like the video preview below. 
 
 In case the activation is succeded, it will inform the Windows was activated successfully and the blue screen will not appear. The message "Activate Windows. Go to settings to activate Windows" on bottom right will disappear during the cooldown time.
 
