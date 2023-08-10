@@ -6,6 +6,10 @@ window.addEventListener('onWidgetLoad', async (obj) => {
   mockData = fieldData.mockData.replaceAll("'",'"') // Replacing single quotes to double quotes for JSON support
   isEditor = obj.detail.overlay.isEditorMode
   
+  if(fieldData.customFontName != ""){
+    document.querySelector("#container").style.fontFamily = fieldData.customFontName
+  }
+  
   // When in Ovelray Editor, show mock data to test font, color, size, spacing, etc
   if(isEditor){
     sortTopGifters(JSON.parse(mockData))
