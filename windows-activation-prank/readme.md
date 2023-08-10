@@ -51,7 +51,7 @@ The instructions are divided into 3 parts.
 ## Overlay Configuration
 
 Finally, we are going to setup the overlay.
-Open the overlay and you will see the left part is divided into 4 parts:
+Open the overlay and you will see the left panel (we call it FIELDS) is divided into 4 parts:
 1. Widget Settings
    - **Language**: English and Portuguese are available.
    - **Cooldown (in minutes)**: Here you are going to put the cooldown value when the Redemption was created in [Twitch Configuration](readme.md#twitch-configuration). In the example, I put 2 hours, which means 120 minutes.
