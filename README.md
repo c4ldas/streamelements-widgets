@@ -5,18 +5,18 @@ Those widgets are mainly for Twitch streamers.
 
 ## How to install: 
 
-### Option 1 - Copy each content to the specific tab on a Custom Widget:
+### Option 1 - Click on the link in the description of each widget for 1-click install. 
+This will create a new overlay in your Streamelements account.
+
+You can just use the overlay created and add to your OBS, or edit the overlay and duplicate the widget to an overlay you already have
+After that, you can remove the overlay that was created when you clicked on the link
+
+### Option 2 - Copy each content to the specific tab on a Custom Widget:
 1 - Create a custom widget on Streamelements Overlay Editor (+ icon > Static/Custom > Custom widget)
 
 2 - Click on Open Editor
 
 3 - Replace each tab with the respective content
-
-### Option 2 - Click on the link in the description of each widget for 1-click install. 
-This will create a new overlay in your Streamelements account.
-
-You can just use the overlay created and add to your OBS, or edit the overlay and duplicate the widget to an overlay you already have
-After that, you can remove the overlay that was created when you clicked on the link
 
 ## Description on how it works
 
