@@ -6,7 +6,7 @@ window.addEventListener('onWidgetLoad', async function (obj){
   showBadge()
   
   async function lolBadge(){
-    const getRankFetch = await fetch(`https://repl.c4ldas.com.br/api/lol/rank?type=overlay&region=${fieldData.region}&player=${fieldData.playerName}`)
+    const getRankFetch = await fetch(`https://repl.c4ldas.com.br/api/lol/rank?type=overlay&region=${fieldData.region}&player=${fieldData.playerName}&tag=${fieldData.tag}`)
     const getRank = await getRankFetch.json()
     const rank = getRank.tier.toLowerCase()
     const points = getRank.leaguePoints
