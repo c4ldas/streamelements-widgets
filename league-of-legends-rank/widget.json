@@ -4,7 +4,13 @@
     "label": "Player name",
     "group": "LOL"
   },
-    
+  
+  "tag": {
+    "type": "text",
+    "label": "Player Tag #",
+    "group": "LOL"
+  },
+  
   "region": {
     "type": "dropdown",
     "label": "Your Region",
