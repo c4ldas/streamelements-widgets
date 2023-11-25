@@ -4,6 +4,12 @@
     "label": "Player name",
     "group": "TFT"
   },
+  
+  "tag": {
+    "type": "text",
+    "label": "Player Tag #",
+    "group": "TFT"
+  }, 
     
   "region": {
     "type": "dropdown",
