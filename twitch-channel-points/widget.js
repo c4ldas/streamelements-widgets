@@ -9,9 +9,9 @@ window.addEventListener('onEventReceived', async (obj) => {
 })
 
 window.addEventListener('onWidgetLoad', async (obj) => {
-
+  apiToken = obj.detail.channel.apiToken
+  channelId = obj.detail.channel.id
   const providerId = obj.detail.channel.providerId
-  const username = obj.detail.channel.username  
   const socket = new WebSocket('wss://pubsub-edge.twitch.tv')
   const eventTopic = `community-points-channel-v1.${providerId}`
     
@@ -64,34 +64,54 @@ window.addEventListener('onWidgetLoad', async (obj) => {
       const redemptionData = JSON.parse(data.data.message);
       
       if(redemptionData.type == 'reward-redeemed'){
-       const { id, reward, user, user_input } = redemptionData.data.redemption;
+       const { id, reward, user, user_input, redeemed_at } = redemptionData.data.redemption;
        const image = reward.image?.url_4x || reward.default_image.url_4x;
-       const background = reward.background_color;
+       const backgroundColor = reward.background_color;
+       const activityId = crypto.randomUUID().replace(/-/g, '').substring(0, 24)
        
-       redemptionRedeemed(id, reward, user, user_input, image, background, redemptionData);
+       redemptionRedeemed(id, reward, user, user_input, image, backgroundColor, redeemed_at, activityId, redemptionData);
       }
     }
   }
-  
+       
   // Here you do whatever you want with the reward
-  function redemptionRedeemed(id, reward, user, user_input, image, background, redemptionData){ 
-    console.table({ 'id': id, 'title': reward.title, 'username': user.display_name, 'userInput': user_input, 'image':  image, 'background': background, 'cost': reward.cost });
-    
-    const data = { 
-      detail: { 
-        listener: "channelPoints", 
-        event: {
-          service: "twitch", 
-          data:  { 'id': id, 'title': reward.title, 'username': user.display_name, 'userInput': user_input, 'image':  image, 'background': background, 'cost': reward.cost },
-          rawData: redemptionData.data,
-        }
-      }
+  async function redemptionRedeemed(id, reward, user, user_input, image, backgroundColor, redeemed_at, activityId, redemptionData){ 
+    const redemptionInfo = { 
+      "rewardId": id, 
+      "activityId": activityId,
+      "title": reward.title, 
+      "createdAt": new Date(redeemed_at).toISOString(),
+      "updatedAt": new Date(redeemed_at).toISOString(),
+      "channel": channelId,
+      "type": "channelPoints",       
+      "data": {
+        "raw": redemptionData.data.redemption,
+        "cost": reward.cost,
+        "backgroundColor": backgroundColor,
+        "image": image,
+        "userInput": user_input,
+        "username": user.display_name,
+      }  
     }
     
-    const channelPointsEvent = new CustomEvent("onEventReceived", data)
-    window.dispatchEvent(channelPointsEvent);
+    // Send a socket event that can be caught by onEventListener('onEventReceived') on any custom widget
+    fetch(`https://api.streamelements.com/kappa/v2/channels/${channelId}/socket`, {
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": `apikey ${apiToken}`
+      },      
+      "body": JSON.stringify({
+        event: "event",
+        data: redemptionInfo
+      })
+    })
+    
+    // const channelPointsEvent = new CustomEvent("onEventReceived", data)
+    // window.dispatchEvent(channelPointsEvent);
 
-    // document.getElementById('redemption').style.background = `no-repeat center/75% url("${image}"), ${background}`;
+    // document.getElementById('redemption').style.background = `no-repeat center/75% url("${image}"), ${backgroundColor}`;
     // document.getElementById('redemptionMessage').innerText = user_input ? user_input : ''
     // setTimeout( () => {
     //   document.getElementById('redemption').style.background = ''
