@@ -6,9 +6,11 @@ The focus on this widget is to help developers to create their own widgets as St
 
 The widget connects to Twitch pubsub (via websocket) and the redemptions are selected from event topic `community-points-channel-v1.${providerId}` (where providerId is the Twitch channel ID). As this information is just raw text, the widget formats that to be easier to work on.
 
-Once a Channel Point is redeemed by an user, you can see it in `onEventReceived` listener in the widget itself. `obj.detail.listener` is "channelPoints", so you can filter it easily. It will also show on browser console the a table with some basic information of the redeemed item. 
+Once a Channel Point is redeemed by an user, you can see it in `onEventReceived` listener. You can filter it by `obj.detail.event.type` which is "channelPoints". It will also show on browser console. 
 
-Based on that, you can work the way you want and make your own personalization. The widget does not have anything on FIELDS tab, as it is only a raw version to collect redemptions from chat. 
+`obj.detail.event.data` shows the basic information of the reward redeemed. You can find more in `obj.detail.event.data.raw`.
+
+Based on that, you can work the way you want and make your custom widgets based on Channel Points redemptions. The widget does not have anything on FIELDS tab, as it is only a raw version to collect redemptions from chat. 
 
 ## 1-click install: 
 
@@ -18,9 +20,13 @@ https://streamelements.com/dashboard/overlays/share/6485fdee73031689652625b5
 
 ### How to use it:
 
-1 - Open the widget and personalize the `onEventReceived` listener the way you want to meet your needs.
+1 - Add the widget to a overlay you use. Just add it to one overlay.
 
-2 - You can also remove the HTML div `text` in case you do not want that (I personally recommend that)
+2 - Redeem any Custom reward and see the information on the widget and the browser console. 
+
+3 - Develop your custom widget based on the information received
+
+OBS: The image and text on the widget will not appear on your OBS. It is only seen on Overlay Editor so you can make sure it is working. 
 
 ### Overlay preview:
 ![Overlay Preview](/twitch-channel-points/widget.png)
