@@ -20,11 +20,13 @@ https://streamelements.com/dashboard/overlays/share/6485fdee73031689652625b5
 
 ### How to use it:
 
-1 - Add the widget to a overlay you use. Just add it to one overlay.
+1 - Add the widget to a overlay you use. It just needs to be added to one overlay.
 
-2 - Redeem any Custom reward and see the information on the widget and the browser console. 
+2 - You don't need to modify anything in this widget, just keep it in a separated place on the overlay.
 
-3 - Develop your custom widget based on the information received
+3 - Redeem any Custom reward and see the information on the widget and the browser console. 
+
+4 - Develop your own custom widget based on the information received
 
 OBS: The image and text on the widget will not appear on your OBS. It is only seen on Overlay Editor so you can make sure it is working. 
 
