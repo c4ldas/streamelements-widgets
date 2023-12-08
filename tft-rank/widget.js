@@ -11,7 +11,7 @@ window.addEventListener('onWidgetLoad', async function (obj){
     const rank = getRank.tier.toLowerCase()
     const points = getRank.leaguePoints
     
-    const badge = `https://raw.communitydragon.org/12.14/game/assets/ux/tftmobile/particles/tft_regalia_${rank}.png`
+    const badge = `https://raw.communitydragon.org/13.24/game/assets/ux/tftmobile/particles/tft_regalia_${rank}.png`
     
     document.getElementById('image-id').src = badge
     
