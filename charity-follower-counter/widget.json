@@ -1,0 +1,88 @@
+{
+  "fontName": {
+    "group": "Font Settings",    
+    "label": "Font Name",
+    "type": "googleFont",
+    "value": "Roboto"    
+  },
+
+  "fontSize": {
+    "group": "Font Settings",
+    "label": "Font Size",
+    "type": "number",
+    "value": 32,
+    "step": 1, 
+    "min": 1
+  },
+  
+  "fontWeight": {
+    "group": "Font Settings", 
+    "label": "Font Weight", 
+    "type": "dropdown",
+    "value": "400",
+    "options": {
+      "100": "100 (thin)",
+      "400": "400 (normal)",
+      "700": "700 (bold)",
+      "900": "900 (bolder)"
+    }
+  },
+  
+  "fontStyle": {
+    "group": "Font Settings", 
+    "label": "Font Style",     
+    "type": "dropdown",
+    "value": "normal",
+    "options": {
+      "normal": "Normal",
+      "italic": "Italic"
+    }
+  },
+  
+  "fontColor": {
+    "group": "Font Settings",    
+    "label": "Font Color",
+    "type": "colorpicker", 
+    "value": "#FFFFFF"
+  },
+    
+  "resetCommand": {
+    "group": "Currency Settings",
+    "label": "Command to reset the counter",
+    "type": "text", 
+    "value": "!resetcounter"
+  },
+  
+  "multiplier": {
+    "group": "Currency Settings",
+    "label": "Multiplier",
+    "type": "number",
+    "value": 0.1,
+    "step": 0.1,
+    "min": 0.1
+  },
+  
+  "currencySymbol": {
+    "group": "Currency Settings",
+    "label": "Currency Symbol", 
+    "type": "text", 
+    "value": "$"
+  },
+  
+  "decimalSeparator": {
+    "group": "Currency Settings",
+    "label": "Decimal Separator", 
+    "type": "text", 
+    "value": "."
+  },
+  
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "c4ldas"
+  },
+  
+  "widgetName": {
+    "type": "hidden",
+    "value": "Charity Follower Counter"
+  }  
+}
