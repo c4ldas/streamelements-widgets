@@ -26,4 +26,4 @@ https://streamelements.com/dashboard/overlays/share/6561952e0e282b0c326e202b
 
 ### Overlay preview:
 
-
+![Overlay Preview](/charity-follower-counter/widget.png)
