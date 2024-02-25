@@ -3,12 +3,33 @@ const sendPingSeconds = 240000 // 4 minutes
 const reloadOverlayTime = 9000 // 9 seconds
 
 window.addEventListener('onEventReceived', async (obj) => {
-  if(obj.detail.listener == 'channelPoints') {
-    console.log(obj)
-  }
+  if(obj.detail.event.type == "channelPoints"){
+  	console.log(obj)
+  	if(isEditorMode){    
+      const { image, backgroundColor, userInput, title } = obj.detail.event.data
+      document.querySelector("#text").innerText = "This won't appear on OBS, it's just a test on Overlay editor"
+      document.querySelector("#redemption").style.background = `no-repeat center/75% url("${image}"), ${backgroundColor}`;
+      document.querySelector("#redemption-name").innerText = title
+      document.getElementById('redemptionMessage').innerText = userInput
+      setTimeout( () => {
+        document.querySelector("#text").innerText = "Twitch Channel Points"
+        document.querySelector("#redemption").style.background = ""
+        document.querySelector("#redemption-name").innerText = ""
+        document.getElementById('redemptionMessage').innerText = ""
+      }, 10000);  
+    }
+  }  
 })
 
+
 window.addEventListener('onWidgetLoad', async (obj) => {
+  isEditorMode = obj.detail.overlay.isEditorMode
+  
+  if(isEditorMode){
+    document.querySelector("#text").innerText = "Twitch Channel Points"
+    document.querySelector("#redemption-name").innerText = "This info won't appear on your OBS"
+  }
+  
   apiToken = obj.detail.channel.apiToken
   channelId = obj.detail.channel.id
   const providerId = obj.detail.channel.providerId
@@ -77,19 +98,19 @@ window.addEventListener('onWidgetLoad', async (obj) => {
   // Here you do whatever you want with the reward
   async function redemptionRedeemed(id, reward, user, user_input, image, backgroundColor, redeemed_at, activityId, redemptionData){ 
     const redemptionInfo = { 
-      "rewardId": id, 
-      "activityId": activityId,
-      "title": reward.title, 
+      "activityId": activityId, 
       "createdAt": new Date(redeemed_at).toISOString(),
       "updatedAt": new Date(redeemed_at).toISOString(),
       "channel": channelId,
       "type": "channelPoints",       
       "data": {
+        "rewardId": id, 
+        "title": reward.title,
         "raw": redemptionData.data.redemption,
         "cost": reward.cost,
         "backgroundColor": backgroundColor,
         "image": image,
-        "userInput": user_input,
+        "userInput": user_input || "",
         "username": user.display_name,
       }  
     }
@@ -107,15 +128,6 @@ window.addEventListener('onWidgetLoad', async (obj) => {
         data: redemptionInfo
       })
     })
-    
-    // const channelPointsEvent = new CustomEvent("onEventReceived", data)
-    // window.dispatchEvent(channelPointsEvent);
 
-    // document.getElementById('redemption').style.background = `no-repeat center/75% url("${image}"), ${backgroundColor}`;
-    // document.getElementById('redemptionMessage').innerText = user_input ? user_input : ''
-    // setTimeout( () => {
-    //   document.getElementById('redemption').style.background = ''
-    //   document.getElementById('redemptionMessage').innerText = ''
-    // }, 20000);
   }
 })
