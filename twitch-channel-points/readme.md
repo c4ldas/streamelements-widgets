@@ -2,7 +2,7 @@
 
 This widget shows information about the Channel Points redemption redeemed by an user.
 
-The focus on this widget is to help developers to create their own widgets as Streamelements does not have support for that. 
+The focus on this widget is to help developers to create their own widgets as Streamelements does not have native support for that. 
 
 The widget connects to Twitch pubsub (via websocket) and the redemptions are selected from event topic `community-points-channel-v1.${providerId}` (where providerId is the Twitch channel ID). As this information is just raw text, the widget formats that to be easier to work on.
 
