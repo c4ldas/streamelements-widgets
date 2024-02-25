@@ -24,7 +24,7 @@ https://streamelements.com/dashboard/overlays/share/6485fdee73031689652625b5
 
 2 - You don't need to modify anything in this widget, just keep it in a separated place on the overlay.
 
-3 - Redeem any Custom reward and see the information on the widget and the browser console. 
+3 - Redeem any Custom reward and see the information on the widget and the browser console (devTools - F12). 
 
 4 - Develop your own custom widget based on the information received
 
