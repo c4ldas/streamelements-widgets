@@ -1,4 +1,4 @@
-{
+{  
   "autoConnect": {
     "group": "Voicemod API Key",    
     "type": "dropdown",
@@ -16,6 +16,13 @@
     "value": "",
     "label": "Voicemod API Key"
   },  
+
+  "getYourKeyText": {
+    "group": "Voicemod API Key",    
+    "type": "text",
+    "value": "https://voicemod.typeform.com/to/Zh5ZHRED",
+    "label": "Get your API Key on:"
+  },
   
   "titleText": {
     "group": "Title Configuration",
