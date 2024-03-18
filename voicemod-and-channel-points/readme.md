@@ -38,18 +38,18 @@ There are some prerequisites to use this widget.
 Go to (VOICEMOD API CONTROL KEY FORM) and fill the form to request the API key. The key will be sent to your email.
 
 ## Voicemod & Twitch Channel Points widget
-
 PENDING
      
 ## Done!
-
 PENDING
 
 ## Video preview:
 PENDING
 
 ## Overlay preview:
-PENDING
+![Overlay Preview](/voicemod-and-channel-points/widget.png)
+
+
 
 
 
