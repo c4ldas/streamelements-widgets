@@ -67,7 +67,7 @@
     "group": "Voice Name Configuration",
     "type": "text", 
     "value": "",
-    "label": "Placeholder Voice Text"    
+    "label": "Placeholder Voice"    
   },
   
   "currentVoiceFontName": {
