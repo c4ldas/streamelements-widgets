@@ -1,0 +1,83 @@
+* {
+  font-family: "Beaufort for LOL";
+}
+
+.level {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  color: white;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 50%;
+  width: fit-content; 
+  min-width: 20px; 
+  height: fit-content; 
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.8);
+} 
+
+.text {
+  color: white;
+  font-size: 4em;
+}
+
+.results {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.teams {
+  display: flex;
+  visibility: hidden;  
+}
+
+.team {
+  display: flex;
+  gap: 30px;
+}
+
+.team1 {
+  margin-right: auto; /* Pushes team1 images to the left */
+  margin-left: 18%;
+}
+
+.team2 {
+  margin-left: auto; /* Pushes team2 images to the right */
+  margin-right: 18%;
+}
+
+.champion-container {
+  position: relative;
+}
+
+.champion-tile {
+  width: 35px;
+  border-radius: 50%;
+  border-color: transparent; 
+  border-style: solid;
+  border-width: 1.5px;
+  /*display: inline;*/ /*Display images inline */
+}
+
+.kda {
+  font-size: 1.1rem;
+  color: white;
+  margin-left: -10px;
+}
+
+.items {
+  margin-left: -10px;
+  width: 75px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 2px;
+}
+
+.items img {
+  width: 100%;
+  height: auto;
+}

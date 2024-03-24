@@ -1,0 +1,7 @@
+{
+  "mockData": {
+    "type": "checkbox",
+    "label": "Mock data?",
+    "value": false
+  }
+}
