@@ -39,7 +39,7 @@ The instructions are divided into 3 parts.
 
 ## OBS Configuration
 
- We will need to configure OBS shortcut to allow receive response from the requests of the internal LOL API. Unfortunately, the LOL internal API and browsers have protection called CORS that prevents requests that doesn't come from the original source.
+ We will need to configure OBS shortcut to allow receive response from the requests of the internal LOL API. Unfortunately, the LOL internal API has CORS enabled, which disallows requests that doesn't come from the original source (the game itself).
  
  1. Right-click on your OBS shortcut and select `Properties`
  2. At the end of the `Target` box, add a space and type `--disable-web-security`
