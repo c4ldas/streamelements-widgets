@@ -13,7 +13,7 @@
 <p>1 - Get your Steam ID from Steam application using the steps below</p>
 <p>2 - Go to menu Steam &gt; Settings</p>
 <p>3 - Click on Account &gt; View Account Details</p>
-<p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/current-steam-game/steam-id-instruction.png" alt="Preview"></p>
+<p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/current-steam-game/widget.png" alt="Preview"></p>
 <p>4 - Put the Steam ID on the corresponding widget field</p>
 <p>5 - Choose your region from the dropdown list</p>
 <p>6 - If you change the game, type !refresh on chat to reload the widget</p>
@@ -23,7 +23,7 @@
 <li>Go to <code>Privacy Settings</code> and set <code>My profile</code> to <code>Public</code></li>
 </ul>
 <h3>Overlay preview:</h3>
-<p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/current-steam-game/widget.png" alt="Overlay Preview"></p>
+<p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/current-steam-game/steam-id-instruction.png" alt="Overlay Preview"></p>
 <h2>Advanced instructions (optional)</h2>
 <p>These instructions are only valid in case you also want to host the backend on your own server, which is not necessary. I am adding this information because we never know when the server can go down</p>
 <p>You will need a Nodejs server (currently running v16.15.0) and the Steam API key</p>
