@@ -10,13 +10,13 @@
 <h3>How to use it:</h3>
 <p>Original widget description from Streamelements Discord: 
 <a href="https://discord.com/channels/141203863863558144/457957557470887947/883359312817299566">https://discord.com/channels/141203863863558144/457957557470887947/883359312817299566</a></p>
-<p>1 - Get your Steam ID from Steam application using the steps below</p>
-<p>2 - Go to menu Steam &gt; Settings</p>
-<p>3 - Click on Account &gt; View Account Details</p>
+<p>Get your Steam ID from Steam application using the steps below:</p>
+<p>1 - Go to menu Steam &gt; Settings</p>
+<p>2 - Click on Account &gt; View Account Details</p>
 <p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/current-steam-game/steam-id-instruction.png" alt="Preview"></p>
-<p>4 - Put the Steam ID on the corresponding widget field</p>
-<p>5 - Choose your region from the dropdown list</p>
-<p>6 - If you change the game, type !refresh on chat to reload the widget</p>
+<p>3 - Put the Steam ID on the corresponding widget field</p>
+<p>4 - Choose your region from the dropdown list</p>
+<p>5 - If you change the game, type !refresh on chat to reload the widget</p>
 <p>OBS: Your profile needs to be set as Public. Follow the instructions below to check if your profile is public:</p>
 <ul>
 <li>On Steam, click on your username &gt; <code>Edit my profile</code></li>
