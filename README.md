@@ -4,8 +4,7 @@
 <h2>How to install:</h2>
 <h3>Option 1 - Click on the link in the description of each widget for 1-click install.</h3>
 <p>This will create a new overlay in your Streamelements account.</p>
-<p>You can just use the overlay created and add to your OBS, or edit the overlay and duplicate the widget to an overlay you already have
-After that, you can remove the overlay that was created when you clicked on the link</p>
+<p>You can just use the overlay created and add to your OBS, or edit the overlay and duplicate the widget to an overlay you already have. After that, you can remove the overlay that was created when you clicked on the link</p>
 <h3>Option 2 - Go to the Github repository and copy each content to the specific tab in a Custom Widget:</h3>
 <p>1 - Create a custom widget on Streamelements Overlay Editor (+ icon &gt; Static/Custom &gt; Custom widget)</p>
 <p>2 - Click on Open Editor</p>
