@@ -1,5 +1,5 @@
-<h2>Valorant Rank overlay</h2>
-<p>Show off your Valorant elo on your stream with this widget! Just put your Valorant name and tagline and it will give your current badge and points to use on stream. </p>
+<h2 id="widget-name" class="widget-name">Valorant Rank overlay</h2>
+<p id="description" class="description">Show off your Valorant elo on your stream with this widget! Just put your Valorant name and tagline and it will give your current badge and points to use on stream. </p>
 <p>Choose if you want it to appear only for some seconds or permanently. </p>
 <p>Current elo and points are updated every 2 minutes</p>
 <h2>1-click install:</h2>
