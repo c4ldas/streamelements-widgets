@@ -19,7 +19,7 @@
   <p>Each file goes directly to the corresponding tab in the custom widget on Streamelements. The only difference is the <em>widget.json</em>, which should be copied to FIELDS tab.</p>
   <p><img src="https://user-images.githubusercontent.com/75918726/219300427-f0d2a41e-7a66-4baf-8e5b-d2cd716a78d3.png" alt="image"></p>
 </div>
-<h2 id="toggle-reset" class="toggle">How to reset the fields</h2>
+<h2 id="toggle-reset" class="toggle">How to reset the fields:</h2>
 <div id="collapsible-reset" class="collapsible">
   <p>In case you want to reset the configuration of the widget to its default, you can go to DATA tab and replace the contents with { }</p>
   <p><img src="https://user-images.githubusercontent.com/75918726/219302604-7b0d556f-fdc4-45ae-8484-f5edcfadd441.png" alt="image"></p>
