@@ -10,8 +10,8 @@ After that, you can remove the overlay that was created when you clicked on the 
 <p>1 - Create a custom widget on Streamelements Overlay Editor (+ icon &gt; Static/Custom &gt; Custom widget)</p>
 <p>2 - Click on Open Editor</p>
 <p>3 - Replace each tab with the respective content</p>
-<h2>Description on how it works</h2>
-<h3>Each folder will contain 4 files:</h3>
+<!-- <h2>Description on how it works</h2> -->
+<p>Each folder will contain 4 files:</p>
 <p><em>widget.html</em></p>
 <p><em>widget.css</em></p>
 <p><em>widget.js</em></p>
