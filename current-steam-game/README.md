@@ -1,7 +1,7 @@
-<h2 class="title">Current Steam Game</h2>
+<h2 id="widget-name" class="widget-name">Current Steam Game</h2>
+<p id="description" class="description">This widget shows the game you are currently playing on Steam. It shows the game name, price, hours played and the game image as a background</p>
 <p>OBS: This widget was originally created by NooodyFR (<a href="https://github.com/NooodyFR">https://github.com/NooodyFR</a>), but as I am hosting the backend, I am adding it to here as well. </p>
-<p>This widget shows the game you are currently playing on Steam. It shows the game name, price, hours played and the game image as a background</p>
-<h2 class="title">1-click install:</h2>
+<h2>1-click install:</h2>
 <p>Original link:
 <a href="https://strms.net/current_steam_game_by_nooody">https://strms.net/current_steam_game_by_nooody</a></p>
 <p>Same widget, but with instructions included:
