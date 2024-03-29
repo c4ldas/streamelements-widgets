@@ -1,6 +1,6 @@
 ## Valorant Rank overlay
 
-Show off your Valorant elo on your stream with this widget! Just put your Valorant name and tagline and it will give you your current ranked badge and points to be seen on stream. 
+Show off your Valorant elo on your stream with this widget! Just put your Valorant name and tagline and it will give your current badge and points to use on stream. 
 
 Choose if you want it to appear only for some seconds or permanently. 
 
@@ -16,4 +16,4 @@ https://strms.net/valorant_rank_by_c4ldas
 https://streamable.com/v05y5b
 
 ### Overlay preview:
-![Overlay Preview](/valorant-rank/widget.png)
+![Overlay Preview](https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/valorant-rank/widget.png)
