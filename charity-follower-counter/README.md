@@ -1,6 +1,6 @@
-<h2>Charity Follower Counter</h2>
+<h2 id="widget-name" class="widget-name">Charity Follower Counter</h2>
 
-<p>With this widget you can set an amount to donate to charity based on the amount of followers you receive. </p>
+<p id="description" class="description">With this widget you can set an amount to donate to charity based on the amount of followers you receive. </p>
 <p>For example: </p>
 <p>Every Follow = $0.10 to Charity Follower Counter</p>
 <p>This widget was made based on request from <a href="https://github.com/AlphaxNu/">AlphaxNu</a> on <a href="https://github.com/StreamElements/widgets/issues/47">https://github.com/StreamElements/widgets/issues/47</a></p>
