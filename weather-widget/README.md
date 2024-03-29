@@ -1,12 +1,8 @@
-## Important note:
-
-This widget is an import to Streamelements from the original [obs_weather_time_overlay](https://github.com/ngholson/obs_weather_time_overlay) from [ngholson](https://github.com/ngholson/). Please refer to the original overlay as this is just an imported version.
-
 ## Weather widget
 
 This widget allows you to add weather information to your Streamelements overlay. It will show your city, temperature, description and current time.
 
-
+This widget is an import to Streamelements from the original [obs_weather_time_overlay](https://github.com/ngholson/obs_weather_time_overlay) from [ngholson](https://github.com/ngholson/). Please refer to the original overlay as this is just an imported version.
 
 ## 1-click install: 
 
@@ -27,5 +23,5 @@ https://github.com/c4ldas/streamelements-widgets/assets/75918726/eb4d64e5-e89d-4
 
 
 ### Overlay preview:
-![Overlay Preview](/weather-widget/widget.png)
+![Overlay Preview](https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/weather-widget/widget.png)
 
