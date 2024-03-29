@@ -1,7 +1,8 @@
 # PENDING
 # Voicemod and Channel Points widget
 
-This widget allows your viewers to use Channel Points to change your voice when using Voicemod. It is important to mention that the streamer needs to have Voicemod installed on your computer.
+This widget allows your viewers to use Channel Points to change your voice when using Voicemod. 
+It is important to mention that the streamer needs to have Voicemod installed on your computer.
 
 # 1-click install: 
 
@@ -47,7 +48,7 @@ PENDING
 PENDING
 
 ## Overlay preview:
-![Overlay Preview](/voicemod-and-channel-points/widget.png)
+![Overlay Preview](https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/voicemod-and-channel-points/widget.png)
 
 
 
