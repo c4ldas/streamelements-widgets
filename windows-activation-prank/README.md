@@ -85,7 +85,7 @@ If the activation fails, the blue screen will take the entire screen on the stre
 https://user-images.githubusercontent.com/75918726/220400561-fd5969cc-2c4a-4bbe-9f00-56413ce23686.mp4
 
 ## Overlay preview:
-![Overlay Preview](/windows-activation-prank/widget.png)
+![Overlay Preview](https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/windows-activation-prank/widget.png)
 
 
 
