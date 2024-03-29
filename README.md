@@ -2,7 +2,7 @@
 <p>Widgets created by me (or at least the ones I tried to create) for Streamelements overlays.</p>
 <p>Those widgets are mainly for Twitch streamers.</p>
 <h2 id="toggle-install" class="toggle">How to install:</h2>
-<div id="collapsible-install" class="collapsible">
+<div id="collapsible-install" class="collapsible animate__animated">
   <h3>Option 1 - Click on the link in the description of each widget for 1-click install.</h3>
   <p>This will create a new overlay in your Streamelements account.</p>
   <p>You can just use the overlay created and add to your OBS, or edit the overlay and duplicate the widget to an overlay you already have. After that, you can remove the overlay that was created when you clicked on the link</p>
@@ -20,7 +20,7 @@
   <p><img src="https://user-images.githubusercontent.com/75918726/219300427-f0d2a41e-7a66-4baf-8e5b-d2cd716a78d3.png" alt="image"></p>
 </div>
 <h2 id="toggle-reset" class="toggle">How to reset the fields:</h2>
-<div id="collapsible-reset" class="collapsible">
+<div id="collapsible-reset" class="collapsible animate__animated">
   <p>In case you want to reset the configuration of the widget to its default, you can go to DATA tab and replace the contents with { }</p>
   <p><img src="https://user-images.githubusercontent.com/75918726/219302604-7b0d556f-fdc4-45ae-8484-f5edcfadd441.png" alt="image"></p>
 </div>
