@@ -7,11 +7,11 @@
 <h3>How to use it:</h2>
 <p>There are some prerequisites to use this widget. </p>
 <ol>
-<li><p><a href="readme.md#voicemod-installation">Voicemod installed</a></p>
+<li><p><a href="readme.md#voicemod-installation">Voicemod installation</a></p>
 <p>Instructions on how to download and install Voicemod. Skip it if you already have it installed.</p>
 </li>
 <li><p><a href="readme.md#voicemod-api-key">Get an API key</a></p>
-<p>Instructions on how to obtain the API key.</p>
+<p>Instructions on how to obtain the API key to connect to Voicemod.</p>
 </li>
 <li><p><a href="readme.md#voicemod--twitch-channel-points-widget">Voicemod &amp; Channel Points widget</a></p>
 <p>Instructions on how to use the Voicemod widget as well as how to have the Twitch Channel Points widget installed. 
@@ -25,7 +25,7 @@ In case you already have the Twitch Channel Points widget installed, you can che
 <li><p>Download it and install on your computer to be ready to use.</p>
 </li>
 </ol>
-<h3>Voicemod API Key</h2>
+<h3>Get an API Key</h2>
 <p>In order to use the widget, you need to have Voicemod API Key, which is a key that allows you to make requests to your Voicemod programaticaly.</p>
 <p>Go to https://control-api.voicemod.net/ and click on <code>Get Your API Key</code>. Fill the form to request the API Key and that will be sent to your email in a few minutes (it can take a day sometimes, so be patient).</p>
 <p>The form is pretty straightforward, the following info is asked:</p>
