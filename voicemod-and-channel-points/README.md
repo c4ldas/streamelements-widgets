@@ -7,13 +7,13 @@
 <h3>How to use it:</h2>
 <p>There are some prerequisites to use this widget. </p>
 <ol>
-<li><p><a href="readme.md#voicemod-installation">Voicemod installation</a></p>
+<li><p><a href="README.md#voicemod-installation">Voicemod installation</a></p>
 <p>Instructions on how to download and install Voicemod. Skip it if you already have it installed.</p>
 </li>
-<li><p><a href="readme.md#voicemod-api-key">Get an API key</a></p>
+<li><p><a href="README.md#voicemod-api-key">Get an API key</a></p>
 <p>Instructions on how to obtain the API key to connect to Voicemod.</p>
 </li>
-<li><p><a href="readme.md#voicemod--twitch-channel-points-widget">Voicemod &amp; Channel Points widget</a></p>
+<li><p><a href="README.md#voicemod--twitch-channel-points-widget">Voicemod &amp; Channel Points widget</a></p>
 <p>Instructions on how to use the Voicemod widget as well as how to have the Twitch Channel Points widget installed. 
 In case you already have the Twitch Channel Points widget installed, you can check on how not to have duplicated requests.</p>
 </li>
