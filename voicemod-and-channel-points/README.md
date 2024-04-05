@@ -19,7 +19,7 @@ In case you already have the Twitch Channel Points widget installed, you can che
 </li>
 </ol>
 
-<h3>Voicemod Installation</h2>
+<h2>Voicemod Installation</h2>
 <ol>
 <li><p>You can download Voicemod from Voicemod website - https://www.voicemod.net/.</p>
 </li>
@@ -27,7 +27,7 @@ In case you already have the Twitch Channel Points widget installed, you can che
 </li>
 </ol>
 
-<h3>Get an API Key</h2>
+<h2>Get an API Key</h2>
 <p>In order to use the widget, you need to have Voicemod API Key, which is a key that allows you to make requests to your Voicemod programaticaly.</p>
 <p>Go to https://control-api.voicemod.net/ and click on <code>Get Your API Key</code>. Fill the form to request the API Key and that will be sent to your email in a few minutes (it can take a day sometimes, so be patient).</p>
 <p>The form is pretty straightforward, the following info is asked:</p>
@@ -40,7 +40,7 @@ In case you already have the Twitch Channel Points widget installed, you can che
 </ul>
 <p>Where it says <code>Please outline how you intend to integrate Voicemod's real-time voice filters and soundboards into your user experience</code>, you can answer "<code>I'm going to use it to Integrate Voicemod with my overlays and make viewers redeem a custom voice using Twitch channel points</code>", for example.</p>
 
-<h3>Voicemod &amp; Twitch Channel Points widget</h2>
+<h2>Voicemod &amp; Twitch Channel Points widget</h2>
 <p>The widget has a FIELDS section that is divided in 4 main groups (and other 10 <code>Voice</code> groups)</p>
 <ul>
   <li>Voicemod API Key</li>
@@ -63,7 +63,7 @@ In case you already have the Twitch Channel Points widget installed, you can che
     <li>Here you can configure options related to the background of the text, like the color, border and visibility</li>
   </ul>
 </ul>
-<h3>Video preview:</h2>
+<h2>Video preview:</h2>
 <p>PENDING</p>
-<h3>Overlay preview:</h2>
+<h2>Overlay preview:</h2>
 <p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/voicemod-and-channel-points/widget.png" alt="Overlay Preview"></p>
