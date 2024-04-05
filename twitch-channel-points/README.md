@@ -9,7 +9,7 @@
 <p><a href="https://streamelements.com/dashboard/overlays/share/6485fdee73031689652625b5">https://streamelements.com/dashboard/overlays/share/6485fdee73031689652625b5</a></p>
 <h2>Preview and instructions</h2>
 <h3>How to use it:</h3>
-<p>1 - Add the widget to a overlay you use. It just needs to be added to one overlay.</p>
+<p>1 - Add the widget to an overlay you use. It just needs to be added to one overlay.</p>
 <p>2 - You don&#39;t need to modify anything in this widget, just keep it in a separated place on the overlay.</p>
 <p>3 - Redeem any Custom reward and see the information on the widget and the browser console (devTools - F12). </p>
 <p>4 - Develop your own custom widget based on the information received</p>
