@@ -1,26 +1,29 @@
 window.addEventListener('onWidgetLoad', async function (obj){
-   fieldData = obj.detail.fieldData 
-
-   valorantBadge()
-   showBadge()
+  fieldData = obj.detail.fieldData
+  const channel = obj.detail.channel.username
+ 
+  valorantBadge()
+  showBadge()
+  
+  async function valorantBadge(){
+    // const getRankFetch = await fetch(`https://api.henrikdev.xyz/valorant/v1/mmr/${fieldData['region']}/${fieldData['username']}/${fieldData['tagline']}`, {
+    const getRankFetch = await fetch(`https://repl.c4ldas.com.br/api/valorant/rank?region=${fieldData['region']}&player=${fieldData['username']}&tag=${fieldData['tagline']}&type=overlay&channel=${channel}`)
+    const getRankResponse = await getRankFetch.json()
    
-   async function valorantBadge(){
-     const getRankFetch = await fetch(`https://api.henrikdev.xyz/valorant/v1/mmr/${fieldData['region']}/${fieldData['username']}/${fieldData['tagline']}`)
-     const getRankResponse = await getRankFetch.json()
-     const rank = getRankResponse.data.currenttierpatched.toLowerCase()
-     const points = getRankResponse.data.ranking_in_tier
-     
-     const getBadgesFetch = await fetch('https://valorant-api.com/v1/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04')
-     const getBadgesResponse = await getBadgesFetch.json()
-     const tier = getBadgesResponse.data.tiers.find(badge => badge.tierName.toLowerCase() === rank)
-     
-     document.getElementById('image-id').src = tier.largeIcon
-     
-     if(fieldData.showPoints === 'true'){       
-      document.getElementById('points').innerText = `${points} points`
-     }
-          
-     setTimeout(valorantBadge, 120000)
+    const rank = getRankResponse.data.currenttierpatched.toLowerCase()
+    const points = getRankResponse.data.ranking_in_tier
+    
+    const getBadgesFetch = await fetch('https://valorant-api.com/v1/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04')
+    const getBadgesResponse = await getBadgesFetch.json()
+    const tier = getBadgesResponse.data.tiers.find(badge => badge.tierName.toLowerCase() === rank)
+    
+    document.getElementById('image-id').src = tier.largeIcon
+    
+    if(fieldData.showPoints === 'true'){       
+     document.getElementById('points').innerText = `${points} points`
+    }
+         
+    setTimeout(valorantBadge, 120000)
    }
    
    function showBadge(){    
