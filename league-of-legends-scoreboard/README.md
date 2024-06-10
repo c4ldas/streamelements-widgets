@@ -10,11 +10,20 @@ This widget shows the scoreboard on top of the screen, so it is easier to the vi
 The widget is updated in almost real time, in a few seconds after each event happens.
 Unfortunately, the widget installation is not so easy, even because accessing real time data from League of Legends depends on some configuration. But we will go through each part step-by-step here.
 
+# Preview
+
+## Video preview:
+[![Youtube video preview](https://i.imgur.com/T5gFXWR.png)](https://www.youtube.com/watch?v=sXA7VEmf1Bk "Streamelements widget - League of Legends Scoreboard")
+
+## Overlay preview:
+![Overlay Preview](/league-of-legends-scoreboard/widget.png)
+
+
 # 1-click install: 
 
 LINK TO BE AVAILABLE SOON
 
-# Preview and instructions
+# Instructions
 
 ## How to use it:
 
@@ -55,11 +64,6 @@ The instructions are divided into 3 parts.
 
 TO DO
 
-## Video preview:
-[![Youtube video preview](https://i.imgur.com/T5gFXWR.png)](https://www.youtube.com/watch?v=sXA7VEmf1Bk "Streamelements widget - League of Legends Scoreboard")
-
-## Overlay preview:
-![Overlay Preview](/league-of-legends-scoreboard/widget.png)
 
 
 
