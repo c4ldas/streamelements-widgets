@@ -1,0 +1,300 @@
+{  
+  "autoConnect": {
+    "group": "Voicemod API Key",    
+    "type": "dropdown",
+    "value": "false",
+    "label": "Connect to Voicemod?",
+    "options": {
+      "true":true,
+      "false": false
+    }
+  },
+  
+  "voicemodAPIKey": {
+    "group": "Voicemod API Key",
+    "type": "password",
+    "value": "",
+    "label": "Voicemod API Key"
+  },  
+
+  "getYourKeyText": {
+    "group": "Voicemod API Key",    
+    "type": "text",
+    "value": "https://voicemod.typeform.com/to/Zh5ZHRED",
+    "label": "Get your API Key on:"
+  },
+  
+  "titleText": {
+    "group": "Title Configuration",
+    "type": "text", 
+    "value": "Current Voice:",
+    "label": "Title text"    
+  },
+  
+  "titleFontName": {
+    "group": "Title Configuration",
+    "type": "googleFont", 
+    "value": "Roboto",
+    "label": "Font name"
+  },
+  
+  "titleFontSize": {
+    "group": "Title Configuration",
+    "type": "number", 
+    "value": 2,
+    "label": "Font size (rem)",
+    "step": 0.1
+  },
+  
+  "titleMarginLeft": {
+    "group": "Title Configuration",
+    "type": "number", 
+    "value": 0,
+    "label": "Text Left Margin (rem)",
+    "step": 1
+  },   
+  
+  "titleMarginTop": {
+    "group": "Title Configuration",
+    "type": "number", 
+    "value": 1,
+    "label": "Text Top Margin (rem)",
+    "step": 1
+  },     
+  
+  "titleFontColor": {
+    "group": "Title Configuration",
+    "type": "colorpicker", 
+    "value": "hsl(0, 0%, 100%)",
+    "label": "Font color"
+  },  
+    
+  "currentVoiceText": {
+    "group": "Voice Name Configuration",
+    "type": "text", 
+    "value": "Placeholder Voice",
+    "label": "Placeholder Voice Text"    
+  },
+  
+  "currentVoiceFontName": {
+    "group": "Voice Name Configuration",
+    "type": "googleFont", 
+    "value": "Rouge Script",
+    "label": "Font name"
+  },
+  
+  "currentVoiceFontSize": {
+    "group": "Voice Name Configuration",
+    "type": "number", 
+    "value": 4,
+    "label": "Font size (rem)",
+    "step": 0.1,
+    "min": 0.5
+  },
+  
+  "currentVoiceMarginLeft": {
+    "group": "Voice Name Configuration",
+    "type": "number", 
+    "value": 0,
+    "label": "Text Left Margin (rem)",
+    "step": 1
+  },   
+  
+  "currentVoiceMarginTop": {
+    "group": "Voice Name Configuration",
+    "type": "number", 
+    "value": 0,
+    "label": "Text Top Margin (rem)",
+    "step": 1
+  },     
+  
+  "currentVoiceFontColor": {
+    "group": "Voice Name Configuration",
+    "type": "colorpicker", 
+    "value": "hsla(164, 86%, 40%, 100%)",
+    "label": "Font color"
+  },
+  
+  "containerVisible": {
+    "group": "Background Container",
+    "type": "dropdown",
+    "value": "true",
+    "label": "Container Background visible?",
+    "options": {
+      "true": "Container Background Visible",
+      "false": "Not visible"
+    }    
+  },
+  
+  "containerBorder": {
+    "group": "Background Container",  
+    "type": "dropdown",
+    "value": "solid",
+    "label": "Container border?",
+    "options": {
+      "solid": "Border visible",
+      "none": "No border"
+    }
+  },
+  
+  "containerBorderSize": {
+    "group": "Background Container", 
+    "type": "number", 
+    "value": 10,
+    "label": "Container Border Size",
+    "step": 0.1,
+    "min": 1
+  },
+  
+  "containerColor": {
+    "group": "Background Container",
+    "type": "colorpicker",
+    "value": "hsla(238, 34%, 50%, 100%)",
+    "label": "Background container Color"
+  },
+  
+  "containerBorderColor": {
+    "group": "Background Container",
+    "type": "colorpicker", 
+    "value": "hsla(0, 0%, 0%, 100%)",
+    "label": "Border color"
+  },
+    
+  "channelPointName1":{
+    "group": "Voice 1",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"    
+  },
+  
+  "voiceFilterName1": {
+    "group": "Voice 1",
+    "type": "text",
+    "value": "", 
+    "label": "Voice name"
+  },
+  "channelPointName2":{
+    "group": "Voice 2",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"    
+  },
+  
+  "voiceFilterName2": {
+    "group": "Voice 2",
+    "type": "text",
+    "value": "", 
+    "label": "Voice name"
+  },
+  "channelPointName3":{
+    "group": "Voice 3",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"    
+  },
+  
+  "voiceFilterName3": {
+    "group": "Voice 3",
+    "type": "text",
+    "value": "", 
+    "label": "Voice name"
+  },
+  
+    "channelPointName4":{
+    "group": "Voice 4",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"    
+  },
+  
+  "voiceFilterName4": {
+    "group": "Voice 4",
+    "type": "text",
+    "value": "", 
+    "label": "Voice name"
+  },
+  "channelPointName5":{
+    "group": "Voice 5",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"    
+  },
+  
+  "voiceFilterName5": {
+    "group": "Voice 5",
+    "type": "text",
+    "value": "", 
+    "label": "Voice name"
+  },
+  "channelPointName6": {
+    "group": "Voice 6",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"
+  },
+  "voiceFilterName6": {
+    "group": "Voice 6",
+    "type": "text",
+    "value": "",
+    "label": "Voice name"
+  },
+  "channelPointName7": {
+    "group": "Voice 7",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"
+  },
+  "voiceFilterName7": {
+    "group": "Voice 7",
+    "type": "text",
+    "value": "",
+    "label": "Voice name"
+  },
+  "channelPointName8": {
+    "group": "Voice 8",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"
+  },
+  "voiceFilterName8": {
+    "group": "Voice 8",
+    "type": "text",
+    "value": "",
+    "label": "Voice name"
+  },
+  "channelPointName9": {
+    "group": "Voice 9",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"
+  },
+  "voiceFilterName9": {
+    "group": "Voice 9",
+    "type": "text",
+    "value": "",
+    "label": "Voice name"
+  },
+  "channelPointName10": {
+    "group": "Voice 10",
+    "type": "text",
+    "value": "",
+    "label": "Channel Point name"
+  },
+  "voiceFilterName10": {
+    "group": "Voice 10",
+    "type": "text",
+    "value": "",
+    "label": "Voice name"
+  }, 
+  
+  "widgetAuthor": {
+    "group": "",
+    "type": "hidden",
+    "value": "c4ldas"
+  },
+  "widgetName": {
+    "group": "",
+    "type": "hidden",
+    "value": "Voicemod & Channel Points"
+  }
+}

@@ -25,7 +25,7 @@ https://discord.com/channels/141203863863558144/457957557470887947/8833593128172
 
 3 - Click on Account > View Account Details
 
-![Preview](/current-steam-game/steam-id-instruction.png)
+![Preview](https://github.com/c4ldas/streamelements-widgets/blob/main/current-steam-game/steam-id-instruction.png)
 
 4 - Put the Steam ID on the corresponding widget field
 
@@ -40,7 +40,7 @@ OBS: Your profile needs to be set as Public. Follow the instructions below to ch
 
 ### Overlay preview:
 
-![Overlay Preview](/current-steam-game/widget.png)
+![Overlay Preview](https://github.com/c4ldas/streamelements-widgets/blob/main/current-steam-game/widget.png)
 
 
 ## Advanced instructions (optional)
