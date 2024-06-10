@@ -9,9 +9,17 @@
 </ul>
 <p>The widget is updated in almost real time, in a few seconds after each event happens.
 Unfortunately, the widget installation is not so easy, even because accessing real time data from League of Legends depends on some configuration. But we will go through each part step-by-step here.</p>
+
+<h1>Preview</h1>
+<h2>Video preview:</h2>
+<p><a href="https://www.youtube.com/watch?v=sXA7VEmf1Bk" title="Streamelements widget - League of Legends Scoreboard"><img src="https://i.imgur.com/T5gFXWR.png" alt="Youtube video preview"></a></p>
+<h2>Overlay preview:</h2>
+<p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/league-of-legends-scoreboard/widget.png" alt="Overlay Preview"></p>
+
 <h1>1-click install:</h1>
 <p>LINK TO BE AVAILABLE SOON</p>
-<h1>Preview and instructions</h1>
+
+<h1>Instructions</h1>
 <h2>How to use it:</h2>
 <p>The instructions are divided into 3 parts. </p>
 <ol>
@@ -46,7 +54,3 @@ Unfortunately, the widget installation is not so easy, even because accessing re
 </ol>
 <h2>Done!</h2>
 <p>TO DO</p>
-<h2>Video preview:</h2>
-<p><a href="https://www.youtube.com/watch?v=sXA7VEmf1Bk" title="Streamelements widget - League of Legends Scoreboard"><img src="https://i.imgur.com/T5gFXWR.png" alt="Youtube video preview"></a></p>
-<h2>Overlay preview:</h2>
-<p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/league-of-legends-scoreboard/widget.png" alt="Overlay Preview"></p>
