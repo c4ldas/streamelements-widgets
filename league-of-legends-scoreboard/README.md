@@ -53,7 +53,7 @@ Unfortunately, the widget installation is not so easy, even because accessing re
 <ol>
 <li>The overlay usage is pretty basic, once installed, you will see the same as in Overlay Preview. The left side (called FIELDS) will show some options to personalize the widget.</li>
 <li>The FIELDS section is divided by 3 groups: Overlay Test, Configuration and Positioning</li>
-<ul><li><p>Overlay Test - This group contains the option to use Mock data to test the overlay, it will show some champions with full item list so you can check in your OBS before entering in real game</p></li></ul>
+<ul><li><p>Overlay Test - This group contains the option to use Mock data to test the overlay, it will show some champions with full item list. Disable it when you are satisfied and want to see real data.</p></li></ul>
 <ul><li><p>Configuration - This group contains options to organize the layout of the champions and if you want to show the message <code>Waiting game to start...</code> when the game is not running</p></li></ul>
 <ul><li><p>Here you can manually set the position of each team on the screen. You can configure the vertical and horizontal position of each team independently.</p></li></ul>
 
