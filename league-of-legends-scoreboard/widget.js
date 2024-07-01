@@ -22,9 +22,9 @@ window.addEventListener("onWidgetLoad", async (obj) => {
   let interval
   let newImg = document.createElement("img");
     
-  teste()
+  getGameData()
   
-  async function teste() {
+  async function getGameData() {
     try {
       results.innerText = "";
       let response = await fetch(inGameAPI);
@@ -39,7 +39,7 @@ window.addEventListener("onWidgetLoad", async (obj) => {
         let championLevel = data.allPlayers[i].level
       	let foundChampion = championList.find((element) => element.name == championFullName);
       	let championId;
-        console.log(foundChampion)
+        // console.log(foundChampion)
       	
       	if(!foundChampion){
       	  championId = -1
@@ -50,7 +50,7 @@ window.addEventListener("onWidgetLoad", async (obj) => {
         document.querySelector(`#level-${i}`).style.backgroundColor = "black";
         document.querySelector(`#image-${i}`).style.backgroundColor = "hsla(51, 100%, 50%, 100%)";
         document.querySelector(`#level-${i}`).innerText = championLevel;
-      	console.log(championFullName);
+      	// console.log(championFullName);
         // console.log(championLevel);
       	
       	// KDA configuration
@@ -58,7 +58,7 @@ window.addEventListener("onWidgetLoad", async (obj) => {
       	let scores = data.allPlayers[i].scores;
       	let kda = `${scores.kills} / ${scores.deaths} / ${scores.assists}`;
       	kdaDiv.innerText = kda;
-      	console.log(kda)
+      	// console.log(kda)
       	
       	// Items configuration
       	let itemDiv = document.querySelector(`#items-${i}`);
@@ -92,8 +92,8 @@ window.addEventListener("onWidgetLoad", async (obj) => {
       document.querySelector("#teams").style.visibility = "visible";
 
       interval = setTimeout( async () => {
-        teste()
-        console.log(new Date().toISOString())
+        getGameData()
+        // console.log(new Date().toISOString())
       }, 5000)      
       
     } catch (error) {
@@ -105,7 +105,7 @@ window.addEventListener("onWidgetLoad", async (obj) => {
       document.querySelectorAll(".item-unit").src = "";
       document.querySelectorAll(".kda").innerText = "";
       document.querySelectorAll(".champion-tile").src = "";
-      setTimeout(() => { teste() }, 5000);
+      setTimeout(() => { getGameData() }, 5000);
     }  
   }
   
