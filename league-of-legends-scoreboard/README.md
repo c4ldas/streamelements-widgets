@@ -17,7 +17,7 @@ Unfortunately, the widget installation is not so easy, even because accessing re
 <p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/league-of-legends-scoreboard/widget.png" alt="Overlay Preview"></p>
 
 <h1>1-click install:</h1>
-<p>LINK TO BE AVAILABLE SOON</p>
+<p>https://streamelements.com/dashboard/overlays/share/6442fd8507855cbfc906e519</p>
 
 <h1>Instructions</h1>
 <h2>How to use it:</h2>
@@ -35,22 +35,27 @@ Unfortunately, the widget installation is not so easy, even because accessing re
 </ol>
 <h2>Riot Certificate Installation</h2>
 <ol>
-<li>Download and save the Riot self signed certificate clicking on <code>root certificate</code> from Riot Developer page: <a href="https://developer.riotgames.com/docs/lol#game-client-api_root-certificatessl-errors">https://developer.riotgames.com/docs/lol#game-client-api_root-certificatessl-errors</a></li>
-<li>TO DO</li>
-<li>TO DO</li>
+  <li><p>Download and save the Riot self signed certificate clicking on <code>root certificate</code> from Riot Developer page: <a href="https://developer.riotgames.com/docs/lol#game-client-api_root-certificatessl-errors">https://developer.riotgames.com/docs/lol#game-client-api_root-certificatessl-errors</a></p></li>
+  <p><li>Install the certificate using User Certificate or running the command prompt below (replace <code>C:\path_to_cert</code> to the folder where you saved your cert)</p></li>
+  <ul><li><p><code>certutil -user -addstore "Root" C:\path_to_cert\riotgames.pem</code></p></li></ul>
+  <li><p>Certificate installed! You can now delete the riotgames.pem file you downloaded.</p></li>
 </ol>
 <h2>OBS Configuration</h2>
 <p> We will need to configure OBS shortcut to allow receive response from the requests of the internal LOL API. Unfortunately, the LOL internal API has CORS enabled, which disallows requests that doesn&#39;t come from the original source (the game itself).</p>
 <ol>
-<li>Right-click on your OBS shortcut and select <code>Properties</code></li>
-<li>At the end of the <code>Target</code> box, add a space and type <code>--disable-web-security</code></li>
-<li>Click <code>OK</code></li>
+  <li>Right-click on your OBS shortcut and select <code>Properties</code></li>
+  <li>At the end of the <code>Target</code> box, add a space and type <code>--disable-web-security</code></li>
+  <li>Click <code>OK</code></li>
+  <li>Open OBS using that shortcut</li>
 </ol>
 <h2>Overlay Configuration</h2>
 <ol>
-<li>TO DO</li>
-<li>TO DO</li>
-<li>TODO</li>
+<li>The overlay usage is pretty basic, once installed, you will see the same as in Overlay Preview. The left side (called FIELDS) will show some options to personalize the widget.</li>
+<li>The FIELDS section is divided by 3 groups: Overlay Test, Configuration and Positioning</li>
+<ul><li><p>Overlay Test - This group contains the option to use Mock data to test the overlay, it will show some champions with full item list so you can check in your OBS before entering in real game</p></li></ul>
+<ul><li><p>Configuration - This group contains options to organize the layout of the champions and if you want to show the message <code>Waiting game to start...</code> when the game is not running</p></li></ul>
+<ul><li><p>Here you can manually set the position of each team on the screen. You can configure the vertical and horizontal position of each team independently.</p></li></ul>
+
 </ol>
 <h2>Done!</h2>
-<p>TO DO</p>
+<p>That's it! You can start a Training Practice Tool to make sure the values are being updated correctly.</p>
