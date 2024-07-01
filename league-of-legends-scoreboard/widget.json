@@ -1,7 +1,118 @@
 {
   "mockData": {
     "type": "checkbox",
-    "label": "Mock data?",
-    "value": false
+    "label": "Use Mock data?",
+    "value": true,
+    "group": "Overlay Test"
+  },
+  
+  "waitingGameToStart": {
+    "type": "dropdown",
+    "label": "Display 'Waiting game to start...'?",
+    "value": "block",
+    "group": "Configuration",
+    "options": {
+      "block": "Yes",
+      "none": "No"
+    }
+  },
+  
+  "layout": {
+    "type": "dropdown",
+    "label": "Layout",
+    "value": "row",
+    "group": "Configuration",
+    "options": {
+      "column": "Stacked (Column)",
+      "row": "Side by Side (Row)"
+    }
+  },
+  
+  "gap": {
+    "type": "number",
+    "label": "Gap between champions",
+    "value": 30,
+    "min": 0,
+    "step": 1,
+    "group": "Configuration"
+  },  
+  
+  
+  "hPositionT1-Text": {
+    "type": "hidden",
+    "label": "Team 1 Horizontal position",
+    "value": "",
+    "group": "Positioning"
+  },
+  "hPositionT1": {
+    "type": "slider",
+    "label": "",
+    "min": 0,
+    "max": 100,
+    "value": 18,
+    "step": 1,
+    "group": "Positioning"
+  },
+  
+
+  "vPositionT1-Text": {
+    "type": "hidden",
+    "label": "Team 1 Vertical position",
+    "value": "",
+    "group": "Positioning"
+  },
+  "vPositionT1":{
+    "type": "slider",
+    "label": "",
+    "min": 0,
+    "max": 100,
+    "value": 0,
+    "step": 1,
+    "group": "Positioning"  
+  },
+  
+  
+  "hPositionT2-Text": {
+    "type": "hidden",
+    "label": "Team 2 Horizontal position",
+    "value": "",
+    "group": "Positioning"
+  },
+  "hPositionT2": {
+    "type": "slider",
+    "label": "",
+    "min": 0,
+    "max": 100,
+    "value": 18,
+    "step": 1,
+    "group": "Positioning"
+  },
+  
+
+  "vPositionT2-Text": {
+    "type": "hidden",
+    "label": "Team 2 Vertical position",
+    "value": "",
+    "group": "Positioning"
+  },
+  "vPositionT2":{
+    "type": "slider",
+    "label": "",
+    "min": 0,
+    "max": 100,
+    "value": 0,
+    "step": 1,
+    "group": "Positioning"  
+  },
+  
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "c4ldas"
+  },
+  
+  "widgetName": {
+    "type": "hidden",
+    "value": "League of Legends Scoreboard"
   }
+  
 }
