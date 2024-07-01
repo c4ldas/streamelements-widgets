@@ -2,6 +2,33 @@
   font-family: "Beaufort for LOL";
 }
 
+.results {
+  display: {waitingGameToStart};
+}
+
+.teams {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+.team {
+  display: flex;
+  flex-direction: {layout}; /* Stack champion-containers vertically or horizontally */
+  gap: {gap}px;
+  position: absolute;
+}
+
+.team1 {
+  top: {vPositionT1}%;
+  left: {hPositionT1}%;
+}
+
+.team2 {
+  top: {vPositionT2}%;
+  right: {hPositionT2}%;
+}
+
 .level {
   position: absolute;
   top: 20px;
@@ -30,26 +57,6 @@
   font-size: 1.1rem;
 }
 
-.teams {
-  display: flex;
-  visibility: hidden;  
-}
-
-.team {
-  display: flex;
-  gap: 30px;
-}
-
-.team1 {
-  margin-right: auto; /* Pushes team1 images to the left */
-  margin-left: 18%;
-}
-
-.team2 {
-  margin-left: auto; /* Pushes team2 images to the right */
-  margin-right: 18%;
-}
-
 .champion-container {
   position: relative;
 }
@@ -60,12 +67,13 @@
   border-color: transparent; 
   border-style: solid;
   border-width: 1.5px;
-  /*display: inline;*/ /*Display images inline */
 }
 
 .kda {
   font-size: 1.1rem;
   color: white;
+  text-align: center;
+  margin: 0 auto;
   margin-left: -10px;
 }
 
