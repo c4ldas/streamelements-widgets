@@ -1,7 +1,17 @@
+const predictionURL = "https://repl.c4ldas.com.br/api/twitch/prediction";
+const cDragonUrl = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1";
+const imageAssets = "https://raw.communitydragon.org/latest/game/assets/items/icons2d";
+let predictionCreated = false;
+let interval;
+
 window.addEventListener("onWidgetLoad", async (obj) => { 
-  fieldData = obj.detail.fieldData
-  const results = document.querySelector("#results");
   let inGameAPI
+  fieldData = obj.detail.fieldData;
+  channel = obj.detail.channel.username;
+  isEditor = obj.detail.overlay.isEditorMode
+  code = fieldData.twitchCode;  
+  
+  const results = document.querySelector("#results");
   
   console.log("%c This is the LOL overlay", "font-size: 1.5rem; color: green") 
   console.log("%c Mock Data is:", "color: green", fieldData.mockData)
@@ -13,8 +23,7 @@ window.addEventListener("onWidgetLoad", async (obj) => {
   }
   
   console.log("%c InGameAPI:", "color: green", inGameAPI)
-  const cDragonUrl = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1"
-  const imageAssets = "https://raw.communitydragon.org/latest/game/assets/items/icons2d"
+
   const itemFetch = await fetch(`${cDragonUrl}/items.json`)
   const championFetch = await fetch(`${cDragonUrl}/champion-summary.json`)
   const itemList = await itemFetch.json()
@@ -22,21 +31,33 @@ window.addEventListener("onWidgetLoad", async (obj) => {
   let interval
   let newImg = document.createElement("img");
     
-  getGameData()
+  // if(!isEditor) getGameData();
+  getGameData()  
   
   async function getGameData() {
     try {
       results.innerText = "";
       let response = await fetch(inGameAPI);
-      let data = await response.json();     
+      let data = await response.json();
+      
+      if(fieldData.enablePrediction == "true" && predictionCreated == false && data.events.Events.length == 1){
+        const choice1 = "Win";
+        const choice2 = "Lose";
+        predictionCreated = createPrediction(fieldData.time, fieldData.predictionQuestion, choice1, choice2);
+      }
+      
+      const lastEvent = data.events.Events.findLast( (event) => event.EventName == "GameEnd");
+      if(fieldData.enablePrediction == "true" && !fieldData.mockData && lastEvent) closePrediction(lastEvent.Result);    
       
       // Loop through each player and set the corresponding image source
       for (let i = 0; i < data.allPlayers.length; i++) {
         
+        if(data.allPlayers[i].championName == "Target Dummy") break; // remove dummies
+        
         // Champion configuration
         let championDiv = document.querySelector(`#image-${i}`);
         let championFullName = data.allPlayers[i].championName;
-        let championLevel = data.allPlayers[i].level
+        let championLevel = data.allPlayers[i].level;
       	let foundChampion = championList.find((element) => element.name == championFullName);
       	let championId;
         // console.log(foundChampion)
@@ -90,16 +111,15 @@ window.addEventListener("onWidgetLoad", async (obj) => {
         }
       }
       document.querySelector("#teams").style.visibility = "visible";
-
+      
       interval = setTimeout( async () => {
         getGameData()
         // console.log(new Date().toISOString())
-      }, 5000)      
+      }, 5000);
       
-    } catch (error) {
-      console.log("Entrou no catch");      
+    } catch (error) {     
       clearInterval(interval);
-      console.log(error)
+      console.log("Catch error:", error)
       document.querySelector("#teams").style.visibility = "hidden";
       results.innerText = "Waiting game to start...";
       document.querySelectorAll(".item-unit").src = "";
@@ -110,3 +130,22 @@ window.addEventListener("onWidgetLoad", async (obj) => {
   }
   
 });
+
+// Create Prediction - Start
+async function createPrediction(submissionTime, question, option1, option2){
+  console.log("Creating Prediction");
+  const predictionCreateFetch = await fetch(`${predictionURL}/create/${fieldData.twitchCode}/?time=${submissionTime}&channel=${channel}&option1=${option1}&option2=${option2}&question=${question}`);
+  const predictionCreate = await predictionCreateFetch.text();
+  console.log(predictionCreate);
+  return predictionCreate.startsWith('Erro') ? true : false;
+}    
+
+// Close Prediction - Start
+async function closePrediction(option){
+  console.log("Closing Prediction");
+  const predictionCloseFetch = await fetch(`${predictionURL}/close/${fieldData.twitchCode}/?channel=${channel}&winner=${option}`) 
+  const predictionClose = await predictionCloseFetch.text();
+  predictionCreated = false;
+  console.log(predictionClose);
+  return      
+}
