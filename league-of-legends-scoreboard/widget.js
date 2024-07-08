@@ -13,8 +13,8 @@ window.addEventListener("onWidgetLoad", async (obj) => {
   
   const results = document.querySelector("#results");
   
-  console.log("%c This is the LOL overlay", "font-size: 1.5rem; color: green") 
-  console.log("%c Mock Data is:", "color: green", fieldData.mockData)
+  console.log("%c League of Legends Scoreboard overlay", "font-size: 1.5rem; color: green");
+  console.log("%c Mock Data is:", "color: green", fieldData.mockData);
   
   if(fieldData.mockData){
     inGameAPI = "https://lol-c4ldas.replit.app/allgamedata";
