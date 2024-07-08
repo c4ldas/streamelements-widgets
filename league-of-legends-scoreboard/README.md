@@ -19,7 +19,7 @@ Unfortunately, the widget installation is not so easy, even because accessing re
 <p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/league-of-legends-scoreboard/widget.png" alt="Overlay Preview"></p>
 
 <h1>1-click install:</h1>
-<p>https://streamelements.com/dashboard/overlays/share/6442fd8507855cbfc906e519</p>
+<p>https://streamelements.com/dashboard/overlays/share/6685b5e685cc27e0cd243a57</p>
 
 <h1>Instructions</h1>
 <h2>How to use it:</h2>
