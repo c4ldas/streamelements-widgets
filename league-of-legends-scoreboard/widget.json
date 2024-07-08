@@ -6,6 +6,51 @@
     "group": "Overlay Test"
   },
   
+  "enablePrediction": {
+    "type": "dropdown", 
+    "label": "Enable Twitch auto prediction?",
+    "value": "true",
+    "group": "Configuration", 
+    "options": {
+      "true": "Yes",
+      "false": "No"
+    }
+  },
+  
+  "timeText": {
+    "type": "hidden",
+    "label": "Submission duration (in seconds)",
+    "group": "Configuration"
+  },  
+  "time": {
+    "type": "number",
+    "label": "Min 30 / Max 1800",
+    "value": 120,
+    "min": 30,
+    "max": 1800,
+    "step": 1,
+    "group": "Configuration"
+  },
+  
+  "twitchCodeText": {
+    "type": "hidden",
+    "label": "Twitch Code from",
+    "group": "Configuration"
+  },    
+  "twitchCode": {
+    "type": "text",
+    "label": "https://c4ldas.com.br/api/twitch", 
+    "value": "0",
+    "group": "Configuration"
+  },
+  
+  "predictionQuestion": {
+    "type": "text",
+    "label": "Prediction question (Win / Lose)",
+    "value": "What will be the result of this game?",
+    "group": "Configuration"
+  },
+  
   "waitingGameToStart": {
     "type": "dropdown",
     "label": "Display 'Waiting game to start...'?",
@@ -21,7 +66,7 @@
     "type": "dropdown",
     "label": "Layout",
     "value": "row",
-    "group": "Configuration",
+    "group": "Layout",
     "options": {
       "column": "Stacked (Column)",
       "row": "Side by Side (Row)"
@@ -34,7 +79,7 @@
     "value": 30,
     "min": 0,
     "step": 1,
-    "group": "Configuration"
+    "group": "Layout"
   },  
   
   
@@ -42,7 +87,7 @@
     "type": "hidden",
     "label": "Team 1 Horizontal position",
     "value": "",
-    "group": "Positioning"
+    "group": "Layout"
   },
   "hPositionT1": {
     "type": "slider",
@@ -51,7 +96,7 @@
     "max": 100,
     "value": 18,
     "step": 1,
-    "group": "Positioning"
+    "group": "Layout"
   },
   
 
@@ -59,7 +104,7 @@
     "type": "hidden",
     "label": "Team 1 Vertical position",
     "value": "",
-    "group": "Positioning"
+    "group": "Layout"
   },
   "vPositionT1":{
     "type": "slider",
@@ -68,7 +113,7 @@
     "max": 100,
     "value": 0,
     "step": 1,
-    "group": "Positioning"  
+    "group": "Layout"  
   },
   
   
@@ -76,7 +121,7 @@
     "type": "hidden",
     "label": "Team 2 Horizontal position",
     "value": "",
-    "group": "Positioning"
+    "group": "Layout"
   },
   "hPositionT2": {
     "type": "slider",
@@ -85,7 +130,7 @@
     "max": 100,
     "value": 18,
     "step": 1,
-    "group": "Positioning"
+    "group": "Layout"
   },
   
 
@@ -93,7 +138,7 @@
     "type": "hidden",
     "label": "Team 2 Vertical position",
     "value": "",
-    "group": "Positioning"
+    "group": "Layout"
   },
   "vPositionT2":{
     "type": "slider",
@@ -102,7 +147,7 @@
     "max": 100,
     "value": 0,
     "step": 1,
-    "group": "Positioning"  
+    "group": "Layout"  
   },
   
   "widgetAuthor": {
@@ -114,5 +159,4 @@
     "type": "hidden",
     "value": "League of Legends Scoreboard"
   }
-  
 }
