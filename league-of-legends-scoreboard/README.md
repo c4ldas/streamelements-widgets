@@ -42,14 +42,14 @@ Unfortunately, the widget installation is not so easy, even because accessing re
   <p>Here we are going to install the overlay</p>
 </li>
 </ol>
-<h2>Riot Certificate Installation</h2>
+<h2 id="riot-certificate-installation">Riot Certificate Installation</h2>
 <ol>
   <li><p>Download and save the Riot self signed certificate clicking on <code>root certificate</code> from Riot Developer page: <a href="https://developer.riotgames.com/docs/lol#game-client-api_root-certificatessl-errors">https://developer.riotgames.com/docs/lol#game-client-api_root-certificatessl-errors</a></p></li>
   <p><li>Install the certificate using User Certificate or running the command prompt below (replace <code>C:\path_to_cert</code> to the folder where you saved your cert)</p></li>
   <ul><li><p><code>certutil -user -addstore "Root" C:\path_to_cert\riotgames.pem</code></p></li></ul>
   <li><p>Certificate installed! You can now delete the riotgames.pem file you downloaded.</p></li>
 </ol>
-<h2>OBS Configuration</h2>
+<h2 id="obs-configuration">OBS Configuration</h2>
 <p> We will need to configure OBS shortcut to allow receive response from the requests of the internal LOL API. Unfortunately, the LOL internal API has CORS enabled, which disallows requests that doesn&#39;t come from the original source (the game itself).</p>
 <ol>
   <li>Right-click on your OBS shortcut and select <code>Properties</code></li>
@@ -58,7 +58,7 @@ Unfortunately, the widget installation is not so easy, even because accessing re
   <li>Open OBS using that shortcut</li>
 </ol>
 
-<h2>Twitch Prediction</h2>
+<h2 id="twitch-prediction">Twitch Prediction</h2>
 <p> To allow the widget to create and close predictions, create a code following the steps below.</p>
 <ol>
   <li>Go to https://c4ldas.com.br/api/twitch and link your Twitch account</code></li>
@@ -68,7 +68,7 @@ Unfortunately, the widget installation is not so easy, even because accessing re
   <li>Click on <code>SAVE</code> button</li>
 </ol>
 
-<h2>Overlay Configuration</h2>
+<h2 id="overlay-configuration">Overlay Configuration</h2>
 <ol>
 <li>The overlay usage is pretty basic, once installed, you will see the same as in Overlay Preview. The left side (called FIELDS) will show some options to personalize the widget.</li>
 <li>The FIELDS section is divided by 4 groups: Overlay Test, Configuration and Layout</li>
