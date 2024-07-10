@@ -26,19 +26,19 @@ Unfortunately, the widget installation is not so easy, even because accessing re
 <p>The instructions are divided into 4 parts.</p>
 <ol>
 <li>
-  <p><a href="readme.md#riot-certificate-installation">Riot Certificate Installation</a></p>
+  <p><a href="./readme.md#riot-certificate-installation">Riot Certificate Installation</a></p>
   <p>Here we will explain how to install the Riot certificate on the computer to be able to retrieve the data from the game</p>
 </li>
 <li>
-  <p><a href="readme.md#obs-configuration">OBS Configuration</a></p>
+  <p><a href="./readme.md#obs-configuration">OBS Configuration</a></p>
   <p>In this part, we will show how to configure the OBS shortcut to have access to the requested data</p>
 </li>
 <li>
-  <p><a href="readme.md#twitch-prediction">Twitch prediction configuration</a></p>
+  <p><a href="./readme.md#twitch-prediction">Twitch prediction configuration</a></p>
   <p>In case you want, you can configure the widget to open and close Twitch predictions for you automatically. You can skip it if you don't want predictions to be created</p>
 </li>
 <li>
-  <p><a href="readme.md#overlay-configuration">Overlay Configuration</a></p>
+  <p><a href="./readme.md#overlay-configuration">Overlay Configuration</a></p>
   <p>Here we are going to install the overlay</p>
 </li>
 </ol>
