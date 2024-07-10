@@ -10,7 +10,7 @@
 <p>The widget also has an option to create and close Twitch predictions. Check the instructions for more information.</p>
 <p>The widget is updated in almost real time, in a few seconds after each event happens.
 Unfortunately, the widget installation is not so easy, even because accessing real time data from League of Legends depends on some configuration. But we will go through each part step-by-step here.</p>
-<p>The font used for KDA and champion level is called <code>Beaufort for LOL</code> and it is the official League of Legends font. You can download at Riot Games Typography website: https://brand.riotgames.com/en-us/league-of-legends/typography/</p>
+<p>The text font used for KDA and champion level is called <code>Beaufort for LOL</code> and it is the official League of Legends font. You can download it at Riot Games Typography website: https://brand.riotgames.com/en-us/league-of-legends/typography/</p>
 
 <h1>Preview</h1>
 <h2>Video preview:</h2>
