@@ -34,7 +34,7 @@ Unfortunately, the widget installation is not so easy, even because accessing re
   <p>In this part, we will show how to configure the OBS shortcut to have access to the requested data</p>
 </li>
 <li>
-  <p><a href="./readme.md#twitch-prediction">Twitch prediction configuration</a></p>
+  <p><a href="README.md#twitch-prediction">Twitch prediction configuration</a></p>
   <p>In case you want, you can configure the widget to open and close Twitch predictions for you automatically. You can skip it if you don't want predictions to be created</p>
 </li>
 <li>
