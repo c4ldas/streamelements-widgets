@@ -1,2 +1,38 @@
 {
+  "emulateTitle": {
+    "type": "text",
+    "value": "Example Redemption",
+    "label": "Emulated Channel Point Title",
+    "group": "Emulation"
+  },
+  
+  "emulateCost": {
+    "type": "number",
+    "value": 100,
+    "label": "Emulated Channel Point Cost",
+    "min": 1,
+    "max": 9999,
+    "group": "Emulation"   
+  },
+  
+  "emulateUsername": {
+    "type": "text",
+    "value": "exampleUser",
+    "label": "Emulated Username",
+    "group": "Emulation"   
+  },
+ 
+  "emulateUserInput": {
+    "type": "text",
+    "value": "",
+    "label": "Emulate Text input",
+    "group": "Emulation"   
+  },
+  
+  "emulateButton": {
+    "type": "button",
+    "value": "emulate",
+    "label": "Emulate channel redemption",
+    "group": "Emulation"
+  }
 }
