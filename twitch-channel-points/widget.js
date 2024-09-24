@@ -3,6 +3,11 @@ const sendPingSeconds = 240000 // 4 minutes
 const reloadOverlayTime = 9000 // 9 seconds
 
 window.addEventListener('onEventReceived', async (obj) => {
+  if(obj.detail.event.field == "emulateButton"){ 
+    const redemptionInfo = createRequest("_", true);
+    sendRequest(redemptionInfo);
+  }
+  
   if(obj.detail.event.type == "channelPoints"){
   	console.log(obj)
   	if(isEditorMode){    
@@ -23,7 +28,8 @@ window.addEventListener('onEventReceived', async (obj) => {
 
 
 window.addEventListener('onWidgetLoad', async (obj) => {
-  isEditorMode = obj.detail.overlay.isEditorMode
+  fieldData = obj.detail.fieldData;
+  isEditorMode = obj.detail.overlay.isEditorMode;
   
   if(isEditorMode){
     document.querySelector("#text").innerText = "Twitch Channel Points"
@@ -80,7 +86,7 @@ window.addEventListener('onWidgetLoad', async (obj) => {
       location.reload()
     }
     
-    // In case it is a Channel Point Redemption, get the variables and call the function RedemptionRedeemed()
+    // In case it is a Channel Point Redemption, get the variables to be sent
     if(data.data?.topic == eventTopic){
       const redemptionData = JSON.parse(data.data.message);
       
@@ -90,44 +96,71 @@ window.addEventListener('onWidgetLoad', async (obj) => {
        const backgroundColor = reward.background_color;
        const activityId = crypto.randomUUID().replace(/-/g, '').substring(0, 24)
        
-       redemptionRedeemed(id, reward, user, user_input, image, backgroundColor, redeemed_at, activityId, redemptionData);
+       const redemptionValues = { id, reward, user, user_input, image, backgroundColor, redeemed_at, activityId, redemptionData }
+       const redemptionInfo = createRequest(redemptionValues, false);
+       sendRequest(redemptionInfo);
       }
     }
   }
        
-  // Here you do whatever you want with the reward
-  async function redemptionRedeemed(id, reward, user, user_input, image, backgroundColor, redeemed_at, activityId, redemptionData){ 
-    const redemptionInfo = { 
-      "activityId": activityId, 
-      "createdAt": new Date(redeemed_at).toISOString(),
-      "updatedAt": new Date(redeemed_at).toISOString(),
+})
+
+// Create request format to be sent via socket
+function createRequest(data, emulation){
+  if(emulation) {
+    const redemptionInfo = {
+      "activityId": crypto.randomUUID().replace(/-/g, '').substring(0, 24), 
+      "createdAt": new Date().toISOString(),
+      "updatedAt": new Date().toISOString(),
       "channel": channelId,
       "type": "channelPoints",       
       "data": {
-        "rewardId": id, 
-        "title": reward.title,
-        "raw": redemptionData.data.redemption,
-        "cost": reward.cost,
-        "backgroundColor": backgroundColor,
-        "image": image,
-        "userInput": user_input || "",
-        "username": user.display_name,
-      }  
-    }
-    
-    // Send a socket event that can be caught by onEventListener('onEventReceived') on any custom widget
-    fetch(`https://api.streamelements.com/kappa/v2/channels/${channelId}/socket`, {
-      "method": "POST",
-      "headers": {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Authorization": `apikey ${apiToken}`
-      },      
-      "body": JSON.stringify({
-        event: "event",
-        data: redemptionInfo
-      })
-    })
-
+        "rewardId": "abcd1234-abcd-1234-abcd-1234abcd1234abcd", 
+        "title": fieldData.emulateTitle,
+        "raw": { info: "No raw data due to emulation", more_info: "Redeem a real redemption for raw data" },
+        "cost": fieldData.emulateCost,
+        "backgroundColor": "#00FF00",
+        "image": "https://static-cdn.jtvnw.net/custom-reward-images/default-4.png",
+        "userInput": fieldData.emulateUserInput,
+        "username": fieldData.emulateUsername,
+      }
+    };
+    return redemptionInfo;
   }
-})
+    
+  const { id, reward, user, user_input, image, backgroundColor, redeemed_at, activityId, redemptionData } = data;
+  const redemptionInfo = { 
+    "activityId": activityId, 
+    "createdAt": new Date(redeemed_at).toISOString(),
+    "updatedAt": new Date(redeemed_at).toISOString(),
+    "channel": channelId,
+    "type": "channelPoints",       
+    "data": {
+      "rewardId": id, 
+      "title": reward.title,
+      "raw": redemptionData.data.redemption,
+      "cost": reward.cost,
+      "backgroundColor": backgroundColor,
+      "image": image,
+      "userInput": user_input || "",
+      "username": user.display_name,
+    }
+  };
+  return redemptionInfo;
+}
+
+// Send a socket event that can be caught by onEventListener('onEventReceived') on any custom widget
+async function sendRequest(redemptionInfo){
+  fetch(`https://api.streamelements.com/kappa/v2/channels/${channelId}/socket`, {
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "Authorization": `apikey ${apiToken}`
+    },      
+    "body": JSON.stringify({
+      event: "event",
+      data: redemptionInfo
+    })
+  })
+}
