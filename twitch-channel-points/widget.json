@@ -25,7 +25,7 @@
   "emulateUserInput": {
     "type": "text",
     "value": "",
-    "label": "Emulate Text input",
+    "label": "Emulated Text input",
     "group": "Emulation"   
   },
   
