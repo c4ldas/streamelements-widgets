@@ -4,7 +4,7 @@
 <p>The widget connects to Twitch pubsub (via websocket) and the redemptions are selected from event topic <code>community-points-channel-v1.${providerId}</code> (where providerId is the Twitch channel ID). As this information is just raw text, the widget formats that to be easier to work on.</p>
 <p>Once a Channel Point is redeemed by an user, you can see it in <code>onEventReceived</code> listener. You can filter it by <code>obj.detail.event.type</code> which is &quot;channelPoints&quot;. It will also show on browser console. </p>
 <p><code>obj.detail.event.data</code> shows the basic information of the reward redeemed. You can find more in <code>obj.detail.event.data.raw</code>.</p>
-<p>You can also use the button "Emulate Channel Redemption" on the widget to test (useful in case you don't have access to real channel points)</p>
+<p>You can also use the button <code>Emulate Channel Redemption</code> on the widget to test (useful in case you don't have access to real channel points)</p>
 <p>Based on that, you can work the way you want and make your custom widgets based on Channel Points redemptions.</p>
 <h2>1-click install:</h2>
 <p><a href="https://streamelements.com/dashboard/overlays/share/6485fdee73031689652625b5">https://streamelements.com/dashboard/overlays/share/6485fdee73031689652625b5</a></p>
