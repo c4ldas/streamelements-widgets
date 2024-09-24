@@ -12,6 +12,7 @@
     "label": "Emulated Channel Point Cost",
     "min": 1,
     "max": 9999,
+    "step": 1,
     "group": "Emulation"   
   },
   
