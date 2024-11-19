@@ -39,7 +39,7 @@
   },    
   "twitchCode": {
     "type": "text",
-    "label": "https://c4ldas.com.br/api/twitch", 
+    "label": "https://c4ldas.com.br/twitch", 
     "value": "0",
     "group": "Configuration"
   },
