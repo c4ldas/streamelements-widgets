@@ -64,7 +64,7 @@ Unfortunately, the widget installation is not so easy, even because accessing re
   <li>Go to https://c4ldas.com.br/api/twitch and link your Twitch account</code></li>
   <li>Once authorized, click on <code>Mostrar code</code> (it means <code>show code</code> in Portuguese) and copy it.</li>
   <li>From the overlay, choose <code>Yes</code> on <code>Configuration > Enable Twitch auto prediction</code>
-  <li>Paste the copied code where it says <code>Twitch Code from https://c4ldas.com.br/api/twitch</code></li>
+  <li>Paste the copied code where it says <code>Twitch Code from https://c4ldas.com.br/twitch</code></li>
   <li>Click on <code>SAVE</code> button</li>
 </ol>
 
