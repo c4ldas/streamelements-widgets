@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family={fontName}');
+
+.donation-name, .donation-amount {
+  padding: 0px;
+  font-family: "{{fontName}}";
+  font-size:{{someSlider}}px;
+  color: {{someColorPicker}};
+  /* text-shadow: 1px 1px black; */
+}
+
+.text-shadow {
+  text-shadow: {shadowIntensity}px {shadowIntensity}px {shadowColor};  
+}
