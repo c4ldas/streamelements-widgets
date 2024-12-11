@@ -10,6 +10,8 @@
 
 <h2>1-click install:</h2>
 <p><a href="https://streamelements.com/dashboard/overlays/share/6759ab1bb1ab8c1d499fb49e">https://streamelements.com/dashboard/overlays/share/6759ab1bb1ab8c1d499fb49e</a></p>
+<p>or</p>
+<p><a href="https://strms.net/extra-life_latest_donor_by_c4ldas">https://strms.net/extra-life_latest_donor_by_c4ldas</a></p>
 
 <h2>Preview and instructions</h2>
 
