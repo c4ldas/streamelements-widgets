@@ -4,7 +4,7 @@
 <p>Very useful to use with the theme "EXTRA LIFE SUPER THEME" (Animated) from Streamelements Overlays Gallery. You just need to insert your Extra-Life ID to start using it</p>
 <p>In order to find your Extra Life ID, go to your fundraising page and look for the participantID on the URL</p>
 
-<img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/extra-life-latest-donor/participantId.gif" alt="Participant ID">
+<img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/extra-life-latest-donor/participantID.gif" alt="Participant ID">
 
 <p>Info: The Extra Life ID is different for each fundraising created</p>
 
