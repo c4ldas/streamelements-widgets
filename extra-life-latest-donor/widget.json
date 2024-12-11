@@ -1,0 +1,72 @@
+{
+  "extraLifeId": {
+    "group": "Extra-Life Config",
+    "type": "number",
+    "label": "Your Extra-Life ID",
+    "value": ""
+  }, 
+  "updateSeconds": {
+    "group": "Extra-Life Config",
+    "type": "number",
+    "label": "Seconds to update the value",
+    "value": 15,
+    "min": 10,
+    "max": 100,
+    "step": 1    
+  },
+  "fontName": {
+    "group": "Font Config",
+    "type": "googleFont",
+    "label": "Select a font:",
+    "value": "Fredoka One"
+  },
+    "someColorPicker": {
+    "group": "Font Config",
+    "type": "colorpicker",
+    "label": "Font Color",
+    "value": "#96d400"
+  },  
+  "someSlider": {
+    "group": "Font Config",
+    "type": "number",
+    "label": "Font Size",
+    "value": 19,
+    "min": 1,
+    "max": 100,
+    "step": 1
+  }, 
+  "textShadow": {
+    "group": "Font Config",
+    "type": "dropdown",
+    "label": "Font shadow?",
+    "value": "false",
+    "options": {
+      "true": "YES",
+      "false": "NO"
+    }
+  },
+  "shadowColor": {
+    "group": "Font Config",    
+    "type": "colorpicker",
+    "value": "#000000",
+    "label": "Shadow Color"
+  },
+  "shadowIntensity": {
+    "group": "Font Config",    
+    "type": "number",
+    "label": "Shadow Intensity",
+    "value": 1,
+    "min": 1,
+    "max": 10
+  },
+
+  "widgetName": {
+    "type": "hidden",
+    "value": "Extra-Life Latest Donor"
+  },
+  
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "c4ldas"
+  }
+}
