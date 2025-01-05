@@ -1,6 +1,3 @@
-// PENDING: 
-// Change the name of the key.
-
 // Initial data to create SE_API object
 let gifterObj = {
     "jan": [],
@@ -20,17 +17,12 @@ let gifterObj = {
 let eventId = [];
 
 // Name of SE_API object key
-const key = "latestGifterData";
+const key = "topMonthlySubgifters";
 
 // Get the current month (jan, feb, mar, apr, etc)
 const currentMonth = new Date().toLocaleDateString("default", {month: "short"}).toLowerCase();
 
 window.addEventListener('onWidgetLoad', async (obj) => {
-  /////////////////////////////
-  // REMOVE!!!!!
-  /////////////////////////////
-  // SE_API.store.set(key, {});
-  /////////////////////////////
     
   fieldData = obj.detail.fieldData;
   isEditor = obj.detail.overlay.isEditorMode;
@@ -74,8 +66,6 @@ window.addEventListener('onEventReceived', async (obj) => {
     if(isNaN(amount)){ amount = 0; }
     
     const kvStore = await SE_API.store.get(key);
-    console.log(kvStore);
-    console.log(kvStore[currentMonth]);
     
     updateUser({"kvStore": kvStore[currentMonth], "username": username, "amount": amount } );
     sortByAmount(kvStore[currentMonth]);
@@ -105,8 +95,6 @@ window.addEventListener('onEventReceived', async (obj) => {
 // onSubBombComplete - Community gift
 /////////////////////////////
 async function onSubBombComplete(data){ 
-  console.log("onSubBombComplete:", data);
-  
   // Check if is Emulated event
   if(eventId.find((value) => value == data._id)){
     console.log("%c [Top monthly subgifters] Emulated event ignored.", "color: yellow;");
@@ -128,9 +116,7 @@ async function onSubBombComplete(data){
 /////////////////////////////
 // onSubGift
 /////////////////////////////
-async function onSubGift(data){
-  console.log("onSubGift(data):", data);
-  
+async function onSubGift(data){  
   // Check if is Emulated event
   if(eventId.find((value) => value == data._id)){
     console.log("%c [Top monthly subgifters] Emulated event ignored.", "color: yellow;");
@@ -146,9 +132,6 @@ async function onSubGift(data){
     
   // Update SE_API with new data
   await SE_API.store.set(key, kvStore);  
-  
-  // Test
-  console.log(await SE_API.store.get(key));
 }
 
               
