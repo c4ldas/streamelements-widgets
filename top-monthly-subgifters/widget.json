@@ -1,0 +1,142 @@
+{
+  "giftersToDisplay": {
+    "type": "number",
+    "label": "Amount of gifters to show:",
+    "step": 1, 
+    "min": 0,
+    "value": 3,
+    "group": "Configuration"
+  },
+  
+  "showAmount": {
+    "type": "dropdown",
+    "label": "Show amount gifted?",
+    "value": "true",
+    "options": {
+      "true": "Yes",
+      "false": "No, only usernames"
+    },
+    "group": "Configuration"
+  },  
+  
+  "commandDescription": {
+    "type": "hidden",
+    "label": "Command to add subgifter manually",
+    "value": "",
+    "group": "Configuration"
+  },  
+  
+  "command": {
+    "type": "text",
+    "label": "(usage: !addgifter username amount)",
+    "value": "!addgifter",
+    "group": "Configuration"
+  },
+  
+  "displayMode": {
+    "type": "dropdown",
+    "label": "Display Mode",
+    "value": "block",
+    "options": {
+      "block": "Each gifter in one line",
+      "inline": "All gifters in the same line"
+    },
+    "group": "Text Spacing"
+  },
+
+  "separator": {
+    "type": "text",
+    "label": "Text separator:",
+    "value": "",
+    "group": "Text Spacing"
+  },
+  
+  "lineHeight": {
+    "type": "number",
+    "label": "Space between lines (rem)",
+    "group": "Font Settings",
+    "step": 0.1,
+    "value": 2,
+    "group": "Text Spacing"
+  },
+  
+
+
+  
+  "fontName": {
+    "type": "googleFont",
+    "label": "Font Name",
+    "value": "Roboto",
+    "group": "Font Settings" 
+  },
+  
+  "customFontName": {
+    "type": "text",
+    "label": "Use Custom Font (i.e.: MV Boli)",
+    "value": "",
+    "group": "Font Settings"
+  },
+  
+  "fontColor": {
+    "type": "colorpicker",
+    "label": "Font color",
+    "value": "#ffffff",
+    "group": "Font Settings"
+  },
+  
+  "fontSize": {
+    "type": "number",
+    "label": "Font Size (rem)",
+    "step": 0.1,
+    "value": 1.5,
+    "group": "Font Settings"
+  },
+  
+  "fontWeight": {
+    "type": "dropdown",
+    "label": "Font Weight",
+    "value": "400",
+    "options": {
+      "100": "100 - Lighter",
+      "200": "200",
+      "300": "300",
+      "400": "400 - Normal",
+      "500": "500",
+      "600": "600",
+      "700": "700 - Bold",
+      "800": "800",
+      "900": "900 - Bolder"
+    },
+    "group": "Font Settings"
+  },
+  
+  "fontStyle": {
+    "type": "dropdown",
+    "label": "Font Style",
+    "value": "normal",
+    "options": {
+      "normal": "Normal",
+      "italic": "Italic"
+    },
+    "group": "Font Settings"
+  },  
+  
+  "testWidget": {
+    "type": "button", 
+    "label": "Test with mock data",
+    "group": "Test"
+  },
+    
+  "widgetName":{
+    "type": "hidden",
+    "value": "Top monthly subgifters",
+    "group": "Test"
+  },
+  
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "c4ldas",
+    "group": "Test"
+  }
+  
+}
