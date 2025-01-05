@@ -56,13 +56,11 @@
     "label": "Space between lines (rem)",
     "group": "Font Settings",
     "step": 0.1,
-    "value": 2,
+    "value": 4,
     "group": "Text Spacing"
   },
   
 
-
-  
   "fontName": {
     "type": "googleFont",
     "label": "Font Name",
@@ -80,7 +78,7 @@
   "fontColor": {
     "type": "colorpicker",
     "label": "Font color",
-    "value": "#ffffff",
+    "value": "#6a6937",
     "group": "Font Settings"
   },
   
@@ -88,7 +86,7 @@
     "type": "number",
     "label": "Font Size (rem)",
     "step": 0.1,
-    "value": 1.5,
+    "value": 3,
     "group": "Font Settings"
   },
   
