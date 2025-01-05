@@ -6,7 +6,7 @@
 <h2>1-click install:</h2>
 <p>//////////// PENDING ////////////////////</p>
 <p>This overlay is not 100% ready to use, some details still need to be polished, but you can test it here if you want:</p>
-<p><a href="https://streamelements.com/dashboard/overlays/share/677a30bd5701dc64cb872b45">https://streamelements.com/dashboard/overlays/share/677a30bd5701dc64cb872b45</a></p>
+<p><a href="https://streamelements.com/dashboard/overlays/share/677a97fa6bafd8955d288c8c">https://streamelements.com/dashboard/overlays/share/677a97fa6bafd8955d288c8c</a></p>
 <h2>Preview and instructions</h2>
 <h3>How to use it:</h3>
 <p>1 - Choose how many gifters you want to show (1, 2, 3, 4, etc. your choice)</p>
