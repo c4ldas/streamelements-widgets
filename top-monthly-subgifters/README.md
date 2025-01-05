@@ -14,5 +14,4 @@
 <p>6 - Every time you want to modify something, the placeholder values will disappear. That will ensure you will not show wrong values on your stream by mistake</p>
 <p>7 - You can also add manually a subgifter using the command <code>!addgifter username amount</code>, i.e.: <code>!addgifter c4ldas 13</code></p>
 <h3>Overlay preview:</h3>
-<p>//////////// PENDING ////////////////////</p>
-<p><img src="" alt="Overlay Preview"></p>
+<p><img src="https://github.com/c4ldas/streamelements-widgets/blob/main/top-monthly-subgifters/widget.png" alt="Overlay Preview"></p>
