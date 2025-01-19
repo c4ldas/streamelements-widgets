@@ -1,151 +1,211 @@
-const predictionURL = "https://repl.c4ldas.com.br/api/twitch/prediction";
-const cDragonUrl = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1";
-const imageAssets = "https://raw.communitydragon.org/latest/game/assets/items/icons2d";
-let predictionCreated = false;
-let interval;
-
 window.addEventListener("onWidgetLoad", async (obj) => { 
-  let inGameAPI
-  fieldData = obj.detail.fieldData;
-  channel = obj.detail.channel.username;
-  isEditor = obj.detail.overlay.isEditorMode
-  code = fieldData.twitchCode;  
+  let interval;
+  let replayId;
+  let predictionCreated = false;
   
-  const results = document.querySelector("#results");
+  const fieldData = obj.detail.fieldData;
+  const channel = obj.detail.channel.username;
+  const isEditor = obj.detail.overlay.isEditorMode; 
   
-  console.log("%c League of Legends Scoreboard overlay", "font-size: 1.5rem; color: green");
-  console.log("%c Mock Data is:", "color: green", fieldData.mockData);
+  const predictionUrl = "https://repl.c4ldas.com.br/api/twitch/prediction";
+  const cDragonUrl = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1";
+  const imageAssets = "https://raw.communitydragon.org/latest/game/assets/items/icons2d";
+  const mockUrl = "https://raw.githubusercontent.com/c4ldas/lol-mock-gamedata/main/allgamedata.json";
+  const inGameUrl = "https://127.0.0.1:2999/liveclientdata/allgamedata";
+  const activeGameUrl = "https://repl.c4ldas.com.br/api/lol/active-game";
   
-  if(fieldData.mockData){
-    inGameAPI = "https://lol-c4ldas.replit.app/allgamedata";
-  } else {
-    inGameAPI = "https://127.0.0.1:2999/liveclientdata/allgamedata";
+  const waiting = document.querySelector("#waiting");
+  const teams = document.querySelector("#teams");
+  const itemUnit = document.querySelectorAll(".item-unit");
+  const kda = document.querySelectorAll(".kda");
+  const championTile = document.querySelectorAll(".champion-tile");  
+  const itemList = await fetch(`${cDragonUrl}/items.json`).then((res) => res.json());
+  const championList = await fetch(`${cDragonUrl}/champion-summary.json`).then((res) => res.json());
+  
+  // Widget description on browser console
+  console.log("%c League of Legends Scoreboard widget", "font-size: 1rem; color: green") 
+  
+  // Widget will wait until player name and tag are filled out.
+  if(!fieldData.playerName || !fieldData.tagLine) {
+    console.log(`%c Please add your "Player name" and "Player tag #" to the fields.`, "color: yellow");
+    return;
   }
   
-  console.log("%c InGameAPI:", "color: green", inGameAPI)
-
-  const itemFetch = await fetch(`${cDragonUrl}/items.json`)
-  const championFetch = await fetch(`${cDragonUrl}/champion-summary.json`)
-  const itemList = await itemFetch.json()
-  const championList = await championFetch.json()
-  let interval
-  let newImg = document.createElement("img");
-    
-  // if(!isEditor) getGameData();
-  getGameData()  
+  getInternalGameData();  
+  getGameResults();  
   
-  async function getGameData() {
+  async function getInternalGameData() {
     try {
-      results.innerText = "";
-      let response = await fetch(inGameAPI);
-      let data = await response.json();
+      waiting.innerText = "";
+  
+      // Fetch the JSON data
+      const response = isEditor || fieldData.mockData ? await fetch(mockUrl) : await fetch(inGameUrl);
+      const data = await response.json();
+  
+      // Loop through each player and update the DOM
+      data.allPlayers.forEach((player, i) => {
+        if (player.championName === "Target Dummy") return; // Skip dummies
+  
+        // Update champion information
+        const championElement = document.querySelector(`#image-${i}`);
+        const championLevelElement = document.querySelector(`#level-${i}`);
+        const championName = player.championName;
+        const championLevel = player.level;
+  
+        const foundChampion = championList.find((champion) => champion.name === championName);
+        const championId = foundChampion ? foundChampion.id : -1;
+  
+        if (championElement) {
+          championElement.src = `${cDragonUrl}/champion-icons/${championId}.png`;
+          championElement.style.backgroundColor = "hsla(51, 100%, 50%, 100%)";
+        }
+        if (championLevelElement) {
+          championLevelElement.innerText = championLevel;
+          championLevelElement.style.backgroundColor = "black";
+        }
+  
+        // Update KDA information
+        const kdaElement = document.querySelector(`#kda-${i}`);
+        if (kdaElement) {
+          const { kills, deaths, assists } = player.scores;
+          kdaElement.innerText = `${kills} / ${deaths} / ${assists}`;
+        }
+  
+        // Update item information
+        const items = player.items;
+        items.forEach((item, index) => {
+          if (index >= 6) return; // Skip trinkets
+          const itemElement = document.querySelector(`#items-${i}-${index}`);
+          if (itemElement) {
+            const foundItem = itemList.find((itm) => itm.id === item.itemID);
+            const itemIcon = foundItem ? foundItem.iconPath.split("/").pop().toLowerCase() : "gp_ui_placeholder.png";
+            itemElement.src = `${imageAssets}/${itemIcon}`;
+          }
+        });
+  
+        // Clear any remaining item slots
+        for (let j = items.length; j < 6; j++) {
+          const itemElement = document.querySelector(`#items-${i}-${j}`);
+          if (itemElement) itemElement.src = ""; // Clear the src attribute
+        }
+      });
+  
+      // Make the teams section visible
+      teams.style.visibility = "visible";
+  
+      // Schedule the next update
+      interval = setTimeout(getInternalGameData, 6000);
       
-      if(fieldData.enablePrediction == "true" && predictionCreated == false && data.events.Events.length == 1){
-        const choice1 = "Win";
-        const choice2 = "Lose";
-        predictionCreated = createPrediction(fieldData.time, fieldData.predictionQuestion, choice1, choice2);
-      }
-      
-      const lastEvent = data.events.Events.findLast( (event) => event.EventName == "GameEnd");
-      if(fieldData.enablePrediction == "true" && !fieldData.mockData && lastEvent) closePrediction(lastEvent.Result);    
-      
-      // Loop through each player and set the corresponding image source
-      for (let i = 0; i < data.allPlayers.length; i++) {
-        
-        if(data.allPlayers[i].championName == "Target Dummy") break; // remove dummies
-        
-        // Champion configuration
-        let championDiv = document.querySelector(`#image-${i}`);
-        let championFullName = data.allPlayers[i].championName;
-        let championLevel = data.allPlayers[i].level;
-      	let foundChampion = championList.find((element) => element.name == championFullName);
-      	let championId;
-        // console.log(foundChampion)
-      	
-      	if(!foundChampion){
-      	  championId = -1
-      	} else {
-      	  championId = foundChampion.id;
-      	}
-      	championDiv.src = `${cDragonUrl}/champion-icons/${championId}.png`;
-        document.querySelector(`#level-${i}`).style.backgroundColor = "black";
-        document.querySelector(`#image-${i}`).style.backgroundColor = "hsla(51, 100%, 50%, 100%)";
-        document.querySelector(`#level-${i}`).innerText = championLevel;
-      	// console.log(championFullName);
-        // console.log(championLevel);
-      	
-      	// KDA configuration
-      	let kdaDiv = document.querySelector(`#kda-${i}`);      
-      	let scores = data.allPlayers[i].scores;
-      	let kda = `${scores.kills} / ${scores.deaths} / ${scores.assists}`;
-      	kdaDiv.innerText = kda;
-      	// console.log(kda)
-      	
-      	// Items configuration
-      	let itemDiv = document.querySelector(`#items-${i}`);
-      	let itemsArray = data.allPlayers[i].items;
-        let totalItems = itemsArray.length; // Total number of items for the current champion
-    	
-        // Loop through each item obtained by the champion
-        itemsArray.forEach( (obj, index) => {
-          if (index == 6) return; // Skip processing the trinket
-          
-          let unitItem = document.querySelector(`#items-${i}-${index}`)    
-      	  let itemId = obj.itemID;
-      	  let foundItem = itemList.find((element) => element.id == itemId );
-      	  let itemName;
-      	  
-      	  if(!foundItem){
-            itemName = "gp_ui_placeholder.png";     
-          } else {
-            itemName = foundItem.iconPath.split("/").pop().toLowerCase();
-          }        
-          unitItem.src = `${imageAssets}/${itemName}`;
+    } catch (error) {
+      clearTimeout(interval);
+      if (!isEditor) console.error("Error fetching or updating data:", error);
+      teams.style.visibility = "hidden";
+      waiting.innerText = "Waiting for the game to start...";
+  
+      // Clear any residual DOM elements
+      document.querySelectorAll(".champion-tile").forEach((el) => (el.src = ""));
+      document.querySelectorAll(".kda").forEach((el) => (el.innerText = ""));
+      document.querySelectorAll(".item-unit").forEach((el) => (el.src = ""));
+  
+      // Retry after a delay
+      setTimeout(getInternalGameData, 5000);
+    }
+  }  
 
-        })
+  
+  // Get Game results from API
+  async function getGameResults() {
+    try {
+      const activeGame = await getActiveGame();
+      
+      if (!("inGame" in activeGame)) return; // In case of error, return;
+      
+      if(activeGame.inGame == true) {
+        replayId = activeGame.currentGame.replayId;      
+        if(fieldData.enablePrediction == "true" && predictionCreated == false) await createPrediction();
         
-        // Clear remaining img elements if the number of items is less than 6
-        for (let j = totalItems; j < 6; j++) {
-          let unitItem = document.querySelector(`#items-${i}-${j}`);
-          unitItem.src = ""; // Clear the src attribute
+      } else {      
+        if(fieldData.enablePrediction == "true" && replayId == activeGame.previousGame.replayId) {
+          activeGame.previousGame.result == "remake" ? await cancelPrediction() : await closePrediction(activeGame.previousGame.result);
+          predictionCreated = false;
+          replayId = "";
         }
       }
-      document.querySelector("#teams").style.visibility = "visible";
+    } catch (error) {
+      console.error("getGameResults():", error);
       
-      interval = setTimeout( async () => {
-        getGameData()
-        // console.log(new Date().toISOString())
-      }, 5000);
-      
-    } catch (error) {     
-      clearInterval(interval);
-      console.log("Catch error:", error)
-      document.querySelector("#teams").style.visibility = "hidden";
-      results.innerText = "Waiting game to start...";
-      document.querySelectorAll(".item-unit").src = "";
-      document.querySelectorAll(".kda").innerText = "";
-      document.querySelectorAll(".champion-tile").src = "";
-      setTimeout(() => { getGameData() }, 5000);
-    }  
+    } finally {
+      setTimeout(() => { getGameResults() }, 1000 * 40); // 40 seconds
+    }
   }
   
+  
+  // Get active game
+  async function getActiveGame() {
+    try {      
+      const options = new URLSearchParams({
+        player: fieldData.playerName,
+        tag: fieldData.tagLine,
+        region: fieldData.region,
+        type: "json"
+      });
+      
+      const request = await fetch(`${activeGameUrl}?${options}`);
+      const response = await request.json();
+      if(response.error) throw response.error;
+      
+      console.log("activeGame", response);
+      
+      return response;
+      
+    } catch (error) {
+      console.error("getActiveGame():", error);
+      throw "Failed to check Active Game";
+    }
+  }
+  
+  
+  // Create prediction. Returns "true" or "false"
+  async function createPrediction(){  
+    console.log("Creating prediction...");
+    const options = new URLSearchParams({
+      channel: channel,
+      time: fieldData.submissionTime,      
+      option1: fieldData.winnerOption,
+      option2: fieldData.loserOption,
+      question: fieldData.predictionQuestion,
+    });
+    
+    const request = await fetch(`${predictionUrl}/create/${fieldData.twitchCode}?${options}`);
+    const response = await request.text();
+    predictionCreated = true;    
+    return response.status == "success" ? true : false;  
+  }  
+  
+  
+  // Close prediction. Returns "true" or "false"
+  async function closePrediction(result) {
+    console.log("Closing prediction...");
+    const options = new URLSearchParams({
+      channel: channel,
+      winner: result == "win" ? fieldData.winnerOption : fieldData.loserOption
+    });
+    
+    const request = await fetch(`${predictionUrl}/close/${fieldData.twitchCode}?${options}`);
+    const response = await request.text();    
+    return response.status == "success" ? true : false;
+  }
+  
+  
+  // Cancel prediction. Returns "true" or "false"
+  async function cancelPrediction(result) {    
+    console.log("Cancelling prediction...");
+    const options = new URLSearchParams({
+      channel: channel
+    });
+    
+    const request = await fetch(`${predictionUrl}/cancel/${fieldData.twitchCode}?${options}`);
+    const response = await request.text();    
+    return response.status == "success" ? true : false;
+  }
 });
-
-// Create Prediction - Start
-async function createPrediction(submissionTime, question, option1, option2){
-  console.log("Creating Prediction");
-  const predictionCreateFetch = await fetch(`${predictionURL}/create/${fieldData.twitchCode}/?time=${submissionTime}&channel=${channel}&option1=${option1}&option2=${option2}&question=${question}`);
-  const predictionCreate = await predictionCreateFetch.text();
-  console.log(predictionCreate);
-  return predictionCreate.startsWith('Erro') ? true : false;
-}    
-
-// Close Prediction - Start
-async function closePrediction(option){
-  console.log("Closing Prediction");
-  const predictionCloseFetch = await fetch(`${predictionURL}/close/${fieldData.twitchCode}/?channel=${channel}&winner=${option}`) 
-  const predictionClose = await predictionCloseFetch.text();
-  predictionCreated = false;
-  console.log(predictionClose);
-  return      
-}
