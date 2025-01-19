@@ -100,7 +100,7 @@ window.addEventListener("onWidgetLoad", async (obj) => {
       clearTimeout(interval);
       if (!isEditor) console.error("Error fetching or updating data:", error);
       teams.style.visibility = "hidden";
-      waiting.innerText = "Waiting for the game to start...";
+      waiting.innerText = "Waiting game start...";
   
       // Clear any residual DOM elements
       document.querySelectorAll(".champion-tile").forEach((el) => (el.src = ""));
