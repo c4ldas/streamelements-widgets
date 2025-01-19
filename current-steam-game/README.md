@@ -6,7 +6,7 @@
 <a href="https://strms.net/current_steam_game_by_nooody">https://strms.net/current_steam_game_by_nooody</a></p>
 <p>Same widget, but with instructions included:
 <a href="https://streamelements.com/dashboard/overlays/share/624e04622e2b5202dbcf8788">https://streamelements.com/dashboard/overlays/share/624e04622e2b5202dbcf8788</a></p>
-<h2class="title">Preview and instructions</h2>
+<h2 class="title">Preview and instructions</h2>
 <h3>How to use it:</h3>
 <p>Original widget description from Streamelements Discord: 
 <a href="https://discord.com/channels/141203863863558144/457957557470887947/883359312817299566">https://discord.com/channels/141203863863558144/457957557470887947/883359312817299566</a></p>
