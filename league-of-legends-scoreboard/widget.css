@@ -2,8 +2,9 @@
   font-family: "Beaufort for LOL";
 }
 
-.results {
+.waiting {
   display: {waitingGameToStart};
+  color: white;
 }
 
 .teams {
