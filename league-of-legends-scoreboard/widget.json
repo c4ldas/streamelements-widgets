@@ -6,10 +6,52 @@
     "group": "Overlay Test"
   },
   
+  "region": {
+    "type": "dropdown",
+    "label": "Region",
+    "value": "br1",
+    "group": "League of Legends",
+    "options": {
+      "br1": "Brazil", 
+      "la1": "Latin America North", 
+      "la2": "Latin America South", 
+      "na1": "North America", 
+      "eun1": "Europe Nordic & East", 
+      "euw1": "Europe West", 
+      "ru1": "Russia", 
+      "tr1": "Turkey", 
+      "jp1": "Japan", 
+      "kr": "Korea", 
+      "me1": "Middle East", 
+      "oc1": "Oceania", 
+      "ph2": "The Philippines", 
+      "sg2": "Singapore, Malaysia, & Indonesia", 
+      "th2": "Thailand", 
+      "tw2": "Taiwan, Hong Kong, and Macao",
+      "vn2": "Vietnam"
+    }
+  },  
+  
+  "playerName": {
+    "type": "text",
+    "label": "Player name",
+    "value": "",
+    "group": "League of Legends"
+  },
+  
+  "tagLine": {
+    "type": "text",
+    "label": "Player tag #",
+    "value": "",
+    "group": "League of Legends"   
+  },
+  
+
+  
   "enablePrediction": {
     "type": "dropdown", 
     "label": "Enable Twitch auto prediction?",
-    "value": "true",
+    "value": "false",
     "group": "Configuration", 
     "options": {
       "true": "Yes",
@@ -17,12 +59,12 @@
     }
   },
   
-  "timeText": {
+  "submissionTimeText": {
     "type": "hidden",
     "label": "Submission duration (in seconds)",
     "group": "Configuration"
   },  
-  "time": {
+  "submissionTime": {
     "type": "number",
     "label": "Min 30 / Max 1800",
     "value": 120,
@@ -46,10 +88,24 @@
   
   "predictionQuestion": {
     "type": "text",
-    "label": "Prediction question (Win / Lose)",
+    "label": "Prediction question",
     "value": "What will be the result of this game?",
     "group": "Configuration"
   },
+  
+  "winnerOption": {
+    "type": "text",
+    "label": "Winner Option",
+    "value": "Win",
+    "group": "Configuration"
+  },
+  
+  "loserOption": {
+    "type": "text",
+    "label": "Loser option",
+    "value": "Lose",
+    "group": "Configuration"
+  },  
   
   "waitingGameToStart": {
     "type": "dropdown",
