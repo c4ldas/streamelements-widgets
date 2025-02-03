@@ -74,7 +74,7 @@ Unfortunately, the widget installation is not so easy, even because accessing re
 <li>The FIELDS section is divided by 4 groups: Overlay Test, League of Legends, Configuration and Layout</li>
 <ul><li><p>Overlay Test - This group contains the option to use Mock data to test the overlay, it will show some champions with full item list. Disable it when you are satisfied and want to see real data.</p></li></ul>
 <ul><li><p>League of Legends - This group is to add your League of Legends username and tag as well as the correct region.</p></li></ul>
-<ul><li><p>Configuration - This group contains options to enable Twitch auto prediction, set the prediction question (the options will always be <code>Win</code>/<code>Lose</code>). You can also enable or disable the message <code>Waiting game to start...</code> when the game is not running.</p></li></ul>
+<ul><li><p>Configuration - This group contains options to enable Twitch auto prediction, set the prediction question and options. You can also enable or disable the message <code>Waiting game to start...</code> when the game is not running.</p></li></ul>
 <ul><li><p>Layout - Here you can manually set the position of each team on the screen. You can configure the vertical and horizontal position of each team independently.</p></li></ul>
 
 </ol>
