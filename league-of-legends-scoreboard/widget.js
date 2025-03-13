@@ -103,9 +103,9 @@ window.addEventListener("onWidgetLoad", async (obj) => {
       waiting.innerText = "Waiting game...";
   
       // Clear any residual DOM elements
-      document.querySelectorAll(".champion-tile").forEach((el) => (el.src = ""));
-      document.querySelectorAll(".kda").forEach((el) => (el.innerText = ""));
-      document.querySelectorAll(".item-unit").forEach((el) => (el.src = ""));
+      championTile.forEach((el) => (el.src = ""));
+      kda.forEach((el) => (el.innerText = ""));
+      itemUnit.forEach((el) => (el.src = ""));
   
       // Retry after a delay
       setTimeout(getInternalGameData, 5000);
