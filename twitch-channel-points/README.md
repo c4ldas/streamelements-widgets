@@ -1,5 +1,5 @@
 <h2>DEPRECATED</h2>
-<p >With the new recently <a href="https://discord.com/channels/141203863863558144/313419268471521291/1354123796344340480">Channel Points support</a> added to StreamElements overlays , there is no need to use this widget anymore. Just use <code>onEventReceived</code> listener on your custom widgets.</p>
+<p >With the StreamElements <a href="https://discord.com/channels/141203863863558144/313419268471521291/1354123796344340480">Channel Points support</a> in overlays, there is no need to use this widget anymore. Just use <code>onEventReceived</code> listener on your custom widgets.</p>
 
 <h2 id="widget-name" class="widget-name">Twitch Channel Points widget</h2>
 <p id="description" class="description">This widget shows information about the Channel Points redemption redeemed by an user.</p>
