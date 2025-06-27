@@ -61,7 +61,7 @@
   "obsPassword": {
     "group": "OBS Settings",
     "type": "password",
-    "label": "OBS password",
+    "label": "OBS Websocket password",
     "value": ""    
   },  
   
