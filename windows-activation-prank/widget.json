@@ -96,7 +96,7 @@
   "refresh": {
     "type": "button",
     "label": "Refresh widget"
-  } 
+  }, 
   
    "widgetAuthor": {
     "type": "hidden",
