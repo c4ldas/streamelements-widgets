@@ -38,7 +38,7 @@ In case you already have the Twitch Channel Points widget installed, you can che
   <li>Your role in the company (optional),</li>
   <li>Website (optional)</li>
 </ul>
-<p>Where it says <code>Please outline how you intend to integrate Voicemod's real-time voice filters and soundboards into your user experience</code>, you can answer "<code>I'm going to use it to Integrate Voicemod with my overlays and make viewers redeem a custom voice using Twitch channel points</code>", for example.</p>
+<p>Where it says <code>Please outline how you intend to integrate Voicemod's real-time voice filters and soundboards into your user experience</code>, you can answer <code>I'm going to use it to Integrate Voicemod with my overlays and make viewers redeem a custom voice using Twitch channel points</code>, for example.</p>
 
 <h2>Voicemod &amp; Twitch Channel Points widget</h2>
 <p>The widget has a FIELDS section that is divided in 4 main groups (and other 10 <code>Voice</code> groups)</p>
