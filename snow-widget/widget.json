@@ -1,0 +1,82 @@
+{
+  "amount": {
+    "group": "Snow configuration",
+    "type": "slider",
+    "label": "Snowflake amount",
+    "value": 300,
+    "min": 10,
+    "max": 1000
+  },
+  "size": {
+    "group": "Snow configuration",
+    "type": "slider",
+    "label": "Snowflake size",
+    "value": 4,
+    "min": 1,
+    "max": 10
+  },
+  "speed": {
+    "group": "Snow configuration",
+    "type": "slider",
+    "label": "Snowflake fall speed",
+    "value": 3,
+    "min": 1,
+    "max": 10
+  },
+  "wind": {
+    "group": "Snow configuration",
+    "type": "slider",
+    "label": "Snowflake wind speed",
+    "value": 3,
+    "min": 1,
+    "max": 10
+  },
+  "fade": {
+    "group": "Snow configuration",
+    "type": "checkbox",
+    "label": "Snow fade",
+    "value": true
+  },
+  "fadeIn": {
+    "group": "Snow configuration",
+    "type": "slider",
+    "label": "Fade in value",
+    "value": 3,
+    "min": 1,
+    "max": 10
+  },
+  "fadeOut": {
+    "group": "Snow configuration",
+    "type": "slider",
+    "label": "Fade out value",
+    "value": 3,
+    "min": 1,
+    "max": 10
+  },
+  "startFromTop": {
+    "group": "Snow configuration",
+    "type": "checkbox",
+    "label": "Snow Start from top?",
+    "value": true
+  },
+  "disableCommand": {
+    "type": "text",
+    "label": "Command to disable snow (only mods)",
+    "value": "!stopsnow",
+    "group": "Chat Command"
+  },
+  "enableCommand": {
+    "type": "text",
+    "label": "Command to enable snow (only mods)",
+    "value": "!snow",
+    "group": "Chat Command"
+  },
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "c4ldas"
+  },
+  "widgetName": {
+    "type": "hidden",
+    "value": "Snow widget"
+  }
+}
