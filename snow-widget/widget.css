@@ -1,0 +1,30 @@
+.snow-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.snow {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  filter: blur(0.3px);
+  animation-name: fall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(var(--startY, -50px)) translateX(0);
+    opacity: var(--opacityStart, 0); /* fade in start */
+  }
+  50% {
+    opacity: var(--opacityMiddle, 1);
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--drift, 0px));
+    opacity: var(--opacityEnd, 0); /* fade out */
+  }
+}
