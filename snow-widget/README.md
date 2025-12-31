@@ -12,4 +12,4 @@
 <p>2 - You can configure a chat command to enable and disable the widget. The commands are only available for the streamer and moderators to use.</p>
 
 <h3>Overlay preview:</h3>
-<p><img src="raw.githubusercontent.com/c4ldas/streamelements-widgets/main/snow-widget/widget.gif" alt="Overlay Preview"></p>
+<p><img src="https://raw.githubusercontent.com/c4ldas/streamelements-widgets/main/snow-widget/widget.gif" alt="Overlay Preview"></p>
