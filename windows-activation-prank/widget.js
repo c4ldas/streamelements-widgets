@@ -1,4 +1,5 @@
-/* <!-- ERROR SCREEN WIDGET --> */
+let messages;
+let textArray;
 
 window.addEventListener('onWidgetLoad', async (obj) => {
   
@@ -27,9 +28,9 @@ window.addEventListener('onWidgetLoad', async (obj) => {
   activate = document.getElementById('activate')
   settings = document.getElementById('settings')
   
-  var textArray =  ['errorMessage', 'percentage', 'moreInformation', 'supportPerson', 'stopCode', 'titleMessage', 'activated', 'subtitle', 'message1', 'message2', 'productKey', 'next', 'cancel', 'activate', 'settings']
+  textArray =  ['errorMessage', 'percentage', 'moreInformation', 'supportPerson', 'stopCode', 'titleMessage', 'activated', 'subtitle', 'message1', 'message2', 'productKey', 'next', 'cancel', 'activate', 'settings']
   
-  var messages = {
+  messages = {
     en: {
       errorMessage: "Your PC ran into a problem and needs to restart. We're<br/>just collecting some error info, and then we'll restart for<br/>you.",
       percentage: "20% complete",
@@ -82,9 +83,12 @@ window.addEventListener('onWidgetLoad', async (obj) => {
     textContainer.style.opacity = 0.7
   }    
   
+/*   
   // Getting Custom Reward Channel Point ID
+  console.log(obj.detail.channel.username);
   const twitchItemsFetch = await fetch(`https://api.jebaited.net/twitchItems/${obj.detail.channel.username}`)
-  const twitchItems = await twitchItemsFetch.json()
+  const twitchItems = await twitchItemsFetch.json();
+  console.log(twitchItems);
   const { customRewards } = twitchItems[0].data.community.channel.communityPointsSettings
   
   for(const element of customRewards){
@@ -93,18 +97,24 @@ window.addEventListener('onWidgetLoad', async (obj) => {
       SE_API.setField("channelPointId", element.id, false)
     }
   } 
+ */
   
 })
 
 window.addEventListener('onEventReceived', (obj) => {
-  console.log(fieldData)
+
+  // console.log(fieldData)
   if(obj.detail.event.listener === 'widget-button' && obj.detail.event.field === 'refresh'){
-    location.reload()
+    location.reload();
+    // "location.reload()" doesn't work on Overlay Editor, so we did this trick
+    SE_API.setField('refresh', 'refresh', true);
   }
   
   // In case the event is not a message, nothing will be executed  
-  if(obj.detail.listener !== 'message') return  
-  if(obj.detail.event.data.tags["custom-reward-id"] !== fieldData.channelPointId) return
+  if(obj.detail.event.type !== "channelPointsRedemption") return;
+  if(obj.detail.event.data.redemption !== fieldData.channelPointName) return;
+
+  console.log("onEventReceived obj:", obj);
   
   // Reset the configuration  
   windowContainer.style.opacity = 1
@@ -117,7 +127,7 @@ window.addEventListener('onEventReceived', (obj) => {
   const typewriter = new Typewriter(productKey, { loop: false, delay: 75, cursor: '' })
   typewriter
     .pauseFor(1000)
-    .typeString(obj.detail.event.renderedText.substring(0,45))
+    .typeString(obj.detail.event.data.message.substring(0,45))
     .callFunction( () => mouseAnimation())
     .start()
   
@@ -162,6 +172,7 @@ window.addEventListener('onEventReceived', (obj) => {
         reactivateWidget()
       }, fieldData.blueScreenTime * 1000)
     }, 5000)
+    
   }  
   
   
@@ -202,7 +213,7 @@ window.addEventListener('onEventReceived', (obj) => {
   
 
   async function reactivateWidget(){
-    console.log("reactivate Widget...")
+    console.log(`Reloading Widget in ${fieldData.reactivateTimer} minutes...`)
     console.log("Editor mode: ", isEditorMode)
     
     if(isEditorMode){        
@@ -216,8 +227,9 @@ window.addEventListener('onEventReceived', (obj) => {
     }
     setTimeout( () => {
       // textContainer.style.visibility = 'visible'
-      location.reload()
+      // "location.reload()" doesn't work on Overlay Editor, so we did this trick
+      SE_API.setField('refresh', 'refresh', true);
+      location.reload();
     }, fieldData.reactivateTimer * 60 * 1000)
   } 
-  
 })
