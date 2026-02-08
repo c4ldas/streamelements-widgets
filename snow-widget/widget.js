@@ -70,21 +70,28 @@ window.addEventListener("onEventReceived", async (obj) => {
   const data = obj.detail.event.data;
   const enableCommand = fieldData.enableCommand;
   const disableCommand = fieldData.disableCommand;
+  const permissionLevel = fieldData.permissionLevel;
 
   const userState = { 
+    "broadcaster": data.nick === data.channel,
     "mod": parseInt(data.tags.mod),
-    "sub": parseInt(data.tags.subscriber),
     "vip": (data.tags.badges.indexOf("vip") !== -1),
-    "broadcaster": data.nick === data.channel
+    "sub": parseInt(data.tags.subscriber)
   }
 
+  const userLevel = 
+    userState.broadcaster ? 4 :
+    userState.mod ? 3 :
+    userState.vip ? 2 :
+    userState.sub ? 1 : 0
+
   // Hide the element
-  if ((userState.mod || userState.broadcaster) && obj.detail.event.data.text == disableCommand) {
+  if ((userLevel >= parseInt(permissionLevel)) && data.text == disableCommand) {
     document.querySelector("#snow-container").style.visibility = "hidden";
   }
 
   // Unhide the element
-  if ((userState.mod || userState.broadcaster) && obj.detail.event.data.text == enableCommand) {
+  if ((userLevel >= parseInt(permissionLevel)) && data.text == enableCommand) {
     document.querySelector("#snow-container").style.visibility = "visible";
   }
 });
