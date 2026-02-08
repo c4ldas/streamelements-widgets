@@ -71,6 +71,18 @@
     "value": "!snow",
     "group": "Chat Command"
   },
+  "permissionLevel": {
+    "group": "Chat Command",
+    "type": "dropdown",
+    "label": "Who is able to run the command?",
+    "value": "3",
+    "options": {
+      "0": "Everyone",
+      "1": "Mods, VIPs, and Subs",
+      "2": "Mods and VIPs only",
+      "3": "Mods only"
+    }
+  },
   "widgetAuthor": {
     "type": "hidden",
     "value": "c4ldas"
