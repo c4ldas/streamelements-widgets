@@ -82,23 +82,7 @@ window.addEventListener('onWidgetLoad', async (obj) => {
     textContainer.style.visibility = 'visible'
     textContainer.style.opacity = 0.7
   }    
-  
-/*   
-  // Getting Custom Reward Channel Point ID
-  console.log(obj.detail.channel.username);
-  const twitchItemsFetch = await fetch(`https://api.jebaited.net/twitchItems/${obj.detail.channel.username}`)
-  const twitchItems = await twitchItemsFetch.json();
-  console.log(twitchItems);
-  const { customRewards } = twitchItems[0].data.community.channel.communityPointsSettings
-  
-  for(const element of customRewards){
-    if(element.title === fieldData.channelPointName){
-      //console.log({ title: element.title, id: element.id })
-      SE_API.setField("channelPointId", element.id, false)
-    }
-  } 
- */
-  
+
 })
 
 window.addEventListener('onEventReceived', (obj) => {
@@ -205,8 +189,6 @@ window.addEventListener('onEventReceived', (obj) => {
       await obs.disconnect()
       console.log('Disconnected from OBS')
       reactivateWidget()
-      // windowContainer.style.visibility = 'hidden'
-      // screenContainer.style.visibility = 'hidden'       
 
     }, fieldData.blueScreenTime * 1000) 
   }
@@ -226,7 +208,6 @@ window.addEventListener('onEventReceived', (obj) => {
       screenContainer.style.visibility = 'hidden'
     }
     setTimeout( () => {
-      // textContainer.style.visibility = 'visible'
       // "location.reload()" doesn't work on Overlay Editor, so we did this trick
       SE_API.setField('refresh', 'refresh', true);
       location.reload();
