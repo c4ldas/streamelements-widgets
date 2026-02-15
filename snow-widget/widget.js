@@ -73,10 +73,10 @@ window.addEventListener("onEventReceived", async (obj) => {
   const permissionLevel = fieldData.permissionLevel;
 
   const userState = { 
-    "broadcaster": data.nick === data.channel,
-    "mod": parseInt(data.tags.mod),
-    "vip": (data.tags.badges.indexOf("vip") !== -1),
-    "sub": parseInt(data.tags.subscriber)
+    "broadcaster": Boolean(data.nick === data.channel),
+    "mod": Boolean(parseInt(data.tags.mod)),
+    "vip": Boolean(data.tags.vip),
+    "sub": Boolean(parseInt(data.tags.subscriber))
   }
 
   const userLevel = 
